@@ -1,0 +1,71 @@
+/**
+ * @version   $Id: lists.css 13692 2013-09-23 19:33:57Z arifin $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+/* Layout - Sprocket Lists - Core */
+.sprocket-lists {position: relative;-webkit-transform: translateZ(0);}
+.sprocket-lists:after {display: table;content: "";*zoom: 1;clear: both;}
+.sprocket-lists ul {list-style: none !important;}
+.sprocket-lists ul.sprocket-lists-container li {padding: 5px 0;margin-bottom: 2px;}
+.sprocket-lists ul.sprocket-lists-container li {position:relative;display: block;width: 100%;}
+.sprocket-lists ul.sprocket-lists-container li:before, .sprocket-lists-container li:after {content:"";position:absolute;left:-3px;}
+.sprocket-lists ul.sprocket-lists-container li:before {right:-15px;bottom:-1px;height:1px;}
+.sprocket-lists ul.sprocket-lists-container li:after {right:-15px;bottom:-2px;height:1px;}
+.sprocket-lists-container {overflow: hidden;margin: 0;padding: 0;}
+
+/* Layout - Sprocket Lists - Titles */
+.sprocket-lists-title {position: relative;padding: 10px 0;font-size: 18px;margin: 0;cursor: pointer;display: block;}
+.sprocket-lists-title.padding {}
+.sprocket-lists-title .indicator {position: absolute;width: 25px;height: 25px;top: 50%;margin-top: -12px;right: 0;display: block;cursor: pointer;text-align: center;opacity: 0.7;}
+.sprocket-lists-title .indicator span {display: none;}
+.sprocket-lists-title .indicator:hover {opacity: 1;}
+.active .indicator {opacity: 1;}
+.sprocket-lists li.active .sprocket-lists-title .indicator:before {content: "×";}
+.sprocket-lists .sprocket-lists-title .indicator:before {content: "+";text-shadow: none;font-size: 17px;padding: 2px;display: block;}
+
+/* Layout - Sprocket Lists - Items */
+.sprocket-lists-item {display: block;position: relative;line-height: 24px;}
+.active .sprocket-lists-item {opacity: 1;margin-bottom: 0;}
+.sprocket-lists-item .sprocket-padding {padding: 0;display: block;}
+.sprocket-lists-image, .sprocket-lists-desc {float: left;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.sprocket-lists-image {width: 25%;padding: 0 15px 0 0;}
+.sprocket-lists-desc {width: 75%;display: block;margin-bottom: 5px;}
+.sprocket-lists-desc.img-disabled {width: 100%;float: none;}
+.sprocket-lists-item .readon-wrapper.img-disabled {display: block;}
+.sprocket-lists-item .readon-wrapper {clear: both;}
+.sprocket-lists-item .readon {margin: 10px 0;}
+
+
+/* Layout - Sprocket Lists - Navigation */
+.sprocket-lists-nav {position: relative;display: block;margin: 15px 0;width: 100%;}
+.sprocket-lists-pagination {left: 50%;margin-left: -25px;position: absolute;}
+.sprocket-lists-pagination ul {float: left;margin: 0 !important;padding: 0 !important;}
+.sprocket-lists-pagination li {display: inline-block;padding: 7px;opacity: 0.8;border-radius: 1em;cursor: pointer;}
+.sprocket-lists-pagination li.active {opacity: 1;}
+.sprocket-lists-pagination li span {display: none;font-size: 0.85em;line-height: 1em;}
+.sprocket-lists-pagination-hidden {display: none;}
+.sprocket-lists-arrows {display: block;position: absolute;right: 0;top: -1px;}
+.sprocket-lists-arrow ul {float: right;margin: 0 !important;padding: 0 !important;}
+.sprocket-lists-arrows .arrow {position: relative;display: block;width: 25px;height:25px;opacity: 0.7;cursor: pointer;float: right;text-align: center;margin-left: 5px;text-shadow: none;-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;}
+.sprocket-lists-arrows .arrow:hover {opacity: 1;}
+.sprocket-lists-arrows .arrow.prev:before {content: '\f104';font-family: FontAwesome;position: absolute;top: 0px;left: 10px;}
+.sprocket-lists-arrows .arrow.next:before {content: '\f105';font-family: FontAwesome;position: absolute;top: 0px;left: 10px;}
+
+/* Layout - Sprocket Lists - Colors */
+.sprocket-lists-arrows .arrow span {display: none;}
+
+/* Layout - Sprocket Lists - Transitions */
+.sprocket-lists-arrows .arrow, .sprocket-lists-title .indicator {-webkit-transition: opacity 0.2s ease-in;-moz-transition: opacity 0.2s ease-in;-o-transition: opacity 0.2s ease-in;transition: opacity 0.2s ease-in;}
+
+/* Spinner */
+.sprocket-lists.loading .spinner:before {font-family: FontAwesome;content: "\f110";font-size: 18px;position: absolute;display: block;margin: 0;width: 16px;text-shadow: none;-webkit-animation: rotate 0.8s linear infinite;-moz-animation: rotate 0.8s linear infinite;-ms-animation: rotate 0.8s linear infinite;-o-animation: rotate 0.8s linear infinite;animation: rotate 0.8s linear infinite;}
+
+/* Custom */
+.sprocket-lists-arrows .arrow {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
+.sprocket-lists-pagination li {background: rgba(0, 0, 0, 0.7);}
+.sprocket-lists-pagination li.active {background: #000000;}
+.sprocket-lists .sprocket-lists-title .indicator:before {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
+.sprocket-lists ul.sprocket-lists-container li {border-bottom: 1px solid rgba(0, 0, 0, 0.1);}

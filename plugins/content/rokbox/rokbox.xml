@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="content" method="upgrade" type="plugin" version="2.5">
+	<name>Content - RokBox</name>
+	<author>RocketTheme, LLC</author>
+	<creationDate>March 4, 2014</creationDate>
+	<copyright>(C) 2005 - 2014 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<version>2.0.7</version>
+	<description><![CDATA[
+        <div class="rokbox-description">
+        <img src="../plugins/system/rokbox/assets/admin/images/rokbox.jpg" class="img-padding" /><h1>RokBox2</h1>
+        <p>Auto generates thumbnails of <strong>local images</strong> that can be used as content for your RokBox2 links. All thumbnails generated are <strong>responsive</strong> so that they can be easily adapted to any device. RokBox2 Content plugins also provides backward compatibility for the old discontinued RokBox1 that allowed writing snippets through the <code>{rokbox}</code> syntax.</p>
+
+        <p class="note"><strong>NOTE:</strong> RokBox2 comes with 3 plugins: <strong>Content</strong>, <strong>System</strong> and <strong>Editor Button</strong>. Make sure to have a look at all three plugin manager pages to get an idea of what they do.</p>
+        </div>
+        ]]></description>
+	<files>
+		<folder>assets</folder>
+        <folder>language</folder>
+        <folder>libs</folder>
+        <filename>index.html</filename>
+        <filename plugin="rokbox">rokbox.php</filename>
+    </files>
+    <config>
+		<fields name="params">
+
+			<fieldset addfieldpath="/plugins/system/rokbox/fields" name="core">
+				<field type="init"/>
+				<field label="Core" type="break"/>
+				<field default="0" description="ROKBOX_DESC_BACKWARDS_COMPAT" label="ROKBOX_LABEL_BACKWARDS_COMPAT" name="backwards_compat" type="rokboxlist">
+                    <option value="0">Disable</option>
+                    <option value="1">Enable</option>
+                </field>
+
+				<field label="ROKBOX_BREAK_THUMBNAILS" type="break"/>
+				<field append="px" default="150" description="ROKBOX_DESC_MAX_WIDTH" label="ROKBOX_LABEL_MAX_WIDTH" name="thumb_width" type="textplus">
+                </field>
+                <field append="px" default="100" description="ROKBOX_DESC_MAX_HEIGHT" label="ROKBOX_LABEL_MAX_HEIGHT" name="thumb_height" type="textplus">
+                </field>
+                <field append="%" default="90" description="ROKBOX_DESC_QUALITY" label="ROKBOX_LABEL_QUALITY" name="thumb_quality" type="textplus">
+                </field>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

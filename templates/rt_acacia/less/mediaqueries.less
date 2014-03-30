@@ -1,0 +1,209 @@
+/**
+* @version   $Id: mediaqueries.less 12813 2013-08-16 21:57:09Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+// Large Mode
+@media only screen and (min-width: 1200px) {
+	body.layout-mode-responsive {
+		// Responsive Classes
+		.visible-large {
+			display: inherit !important;
+		}
+		.hidden-large {
+			display: none !important;
+		}
+		.visible-desktop {
+			display: inherit !important;
+		}
+		.hidden-desktop {
+			display: none !important;
+		}
+	}
+}
+
+// Desktop Modes
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	body.layout-mode-responsive {
+		// Responsive Classes	
+		.visible-large {
+			display: none !important;
+		}
+		.hidden-large {
+			display: inherit !important;
+		}
+		.visible-desktop {
+			display: inherit !important;
+		}
+		.hidden-desktop {
+			display: none !important;
+		} 
+
+		// Heading and Title
+		h1 {font-size: 210%;}
+		h2, .title {font-size: 160%;}
+		h3 {font-size: 130%;}
+		h4 {font-size: 120%;}
+		h5 {font-size: 105%;}
+		.title1 .module-title .title {
+			font-size: 2.3em;
+		}		
+
+		// Menu
+		.gf-menu.l1 > li {
+			margin-right: 5px;
+		}
+	}	
+}
+
+// Tablet Modes
+@media (min-width: 768px) and (max-width: 959px) {
+	body.layout-mode-responsive {
+		// Responsive Classes	
+		.visible-tablet {
+			display: inherit !important;
+		}
+		.hidden-tablet {
+			display: none !important;
+		}
+		.hidden-desktop {
+			display: inherit !important;
+		}
+		.visible-desktop {
+			display: none !important;
+		}
+		.visible-large {
+			display: none !important;
+		}
+		.hidden-large {
+			display: inherit !important;
+		}	
+
+		// Heading and Title
+		h1 {font-size: 180%;}
+		h2, .title {font-size: 130%;}
+		h3 {font-size: 110%;}
+		h4 {font-size: 105%;}
+		h5 {font-size: 100%;}
+		.title1 .module-title .title {
+			font-size: 2em;
+		}
+
+		// Menu
+		.gf-menu.l1 {
+			> li {
+				margin-right: 5px;
+				margin-top: 7px;
+				> .item {
+					height: 35px;
+					padding: 0 5px;
+				}
+				&.parent {
+					> .item {
+						padding-right: 18px;
+						&:after {
+							right: 3px;
+						}
+					}					
+				}
+			}
+		}		
+	}
+}
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body.layout-mode-responsive {
+		padding: 0;
+
+		// Responsive Classes
+		.visible-phone {
+			display: inherit !important;
+		}
+		.hidden-phone {
+			display: none !important;
+		}
+		.hidden-desktop {
+			display: inherit !important;
+		}
+		.visible-desktop {
+			display: none !important;
+		}
+		.hidden-large {
+			display: inherit !important;
+		}
+		.visible-large {
+			display: none !important;
+		}
+
+		.rt-block {
+			margin: 15px 10px;
+		}
+
+		// Heading and Title
+		h1 {font-size: 170%;}
+		h2, .title {font-size: 120%;}
+		h3 {font-size: 110%;}
+		h4 {font-size: 105%;}
+		h5 {font-size: 100%;}
+		.title1 .module-title .title {
+			font-size: 1.8em;
+		}
+
+		// Logo
+		#rt-logo {
+			margin: 15px auto;
+		}
+
+		// Menu
+		.menu-block {
+			float: none;
+			margin: 0 auto;
+		}
+
+		// Joomla Core
+		.component-content {
+			.column-1, .column-2, .column-3, .column-4 {
+				width: 100% !important;
+				float: none !important;
+				margin: 0 !important;
+			}
+		}
+
+		// Extras
+		.gantry-width-20, .gantry-width-25, .gantry-width-30, .gantry-width-33, .gantry-width-40, .gantry-width-50, .gantry-width-60, .gantry-width-66, .gantry-width-70, .gantry-width-75, .gantry-width-80 {
+			width: 100%;
+		}
+		.gantry-width-spacer {
+			margin: 5px;
+		}
+
+		.row {
+			margin: 0;
+			display: block;
+
+			.cell {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.form-horizontal {
+			.control-group {
+				.control-label {
+					float:none;
+					width: auto;
+					text-align:left;
+				}
+				.controls {
+					margin-left: 0;
+				}
+			}
+		}
+		select {
+			width: 100%;
+		}
+	}	
+}

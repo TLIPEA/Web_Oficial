@@ -1,0 +1,120 @@
+/**
+ * @version   $Id: mosaic.css 13868 2013-09-26 21:58:53Z arifin $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+/* Mosaic - Core */
+.sprocket-mosaic {position: relative;-webkit-transform: translateZ(0);}
+.sprocket-mosaic:after {display: table;content: "";clear: both;}
+.sprocket-mosaic .sprocket-mosaic-header ul {list-style: none;margin: 0;padding: 0;}
+.sprocket-mosaic .sprocket-mosaic-container {position: relative;margin: 0; padding: 0;clear: both;}
+
+/* Mosaic - Overlay */
+.sprocket-mosaic-overlay {display: none;position: absolute;top:0;left:0;right:0;bottom:0;background-color:transparent;z-index:2;}
+.sprocket-mosaic-overlay .css-loader-wrapper {width: 60px;height:60px;margin: 25% auto 0;padding: 20px;background-color:#e5e5e5;background-color: rgba(0, 0, 0, 0.5);box-shadow:0 0 5px rgba(0, 0, 0, 0.4) inset,1px 1px 1px rgba(255, 255, 255, 0.1);border-radius:1em;}
+.sprocket-mosaic.refreshing .sprocket-mosaic-overlay {display: block;}
+
+/* Mosaic - Header */
+.sprocket-mosaic .sprocket-mosaic-header {margin-bottom: 10px;}
+.sprocket-mosaic .sprocket-mosaic-header li {display: inline-block;}
+.sprocket-mosaic-pagination-hidden {display: none;}
+
+/* Mosaic - Order */
+.sprocket-mosaic .sprocket-mosaic-header .sprocket-mosaic-order {float: right;}
+.sprocket-mosaic-order li {padding: 5px 10px;margin: 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;-webkit-backface-visibility: hidden;}
+
+/* Mosaic - Filter */
+.sprocket-mosaic .sprocket-mosaic-header .sprocket-mosaic-filter {float: left;}
+.sprocket-mosaic-filter li {padding: 5px 10px;margin: 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;-webkit-backface-visibility: hidden;}
+
+/* Mosaic - Content */
+.sprocket-mosaic-container {margin: 0;padding: 0;list-style: none;}
+.sprocket-mosaic .sprocket-padding {padding: 15px;border: 1px solid rgba(0, 0, 0, 0.1);}
+.sprocket-mosaic-image-container {margin-bottom: 15px;display: block;position: relative;}
+.sprocket-mosaic-container li {display: inline-block;-webkit-backface-visibility: hidden;}
+.sprocket-mosaic .sprocket-readmore {display: table;margin: 15px 0;white-space: nowrap;-webkit-backface-visibility: hidden;}
+
+/* Mosaic - Tags */
+.sprocket-mosaic .sprocket-mosaic-tags {margin: 0;padding: 0;-webkit-backface-visibility: hidden;}
+.sprocket-mosaic .sprocket-mosaic-tags li {display: inline-block;width: auto;margin-right: 1px;padding: 2px 8px;font-size: 0.8em;}
+
+/* Mosaic - Columns */
+.sprocket-mosaic-columns-1 li {width: 100%;}
+.sprocket-mosaic-columns-2 li {width: 50%;}
+.sprocket-mosaic-columns-3 li {width: 33.333333333333336%;}
+.sprocket-mosaic-columns-4 li {width: 25%;}
+.sprocket-mosaic-columns-5 li {width: 20%;}
+.sprocket-mosaic-columns-6 li {width: 16.666666666666668%;}
+
+/* Mosaic - Item */
+.sprocket-mosaic-item {display:block;position: relative;-webkit-backface-visibility: hidden;}
+.sprocket-mosaic-item .sprocket-mosaic-image {width: 100%;}
+.sprocket-mosaic-item .title {margin: 0;font-size: 2em;}
+.sprocket-mosaic-item .sprocket-mosaic-infos {font-size: 1em;margin: 0 0 15px 0;}
+.sprocket-mosaic-item .sprocket-mosaic-text {margin: 15px 0;display: block;line-height: 1.5em;}
+.sprocket-mosaic-item .sprocket-mosaic-text * {position: relative; z-index: 11;}
+.sprocket-mosaic-item .readon {margin-top: 15px;}
+.sprocket-mosaic-hover {bottom: 0;left: 0;position: absolute;top: 0;width: 100%;}
+.sprocket-mosaic-hovercontent {position: absolute;text-align: center;top: 50%;width: 100%;display: block;}
+.sprocket-mosaic-hovercontent span {display: none;}
+
+/* Load More */
+.sprocket-mosaic-loadmore {-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;margin:20px auto 0 auto;display:block;padding:5px;width:155px;height: 45px;}
+.sprocket-mosaic-loadmore.hide { display:none; }
+.sprocket-mosaic-loadmore {cursor: pointer;-webkit-backface-visibility: hidden;}
+.sprocket-mosaic-loadmore span {font-size:12px;text-transform:capitalize;display:block;line-height:1.95em;text-align: center;}
+.sprocket-mosaic-loadmore .loadmore-info {font-size:10px;}
+.sprocket-mosaic-loadmore span strong {font-weight:normal;}
+.sprocket-mosaic-loadmore .loadmore-all {display: none;}
+.sprocket-mosaic-loadmore .loadmore-all span {line-height:42px;}
+.sprocket-mosaic-loadmore .loadmore-all .loadmore-info { display:none; }
+.sprocket-mosaic-loadmore.load-all .loadmore-all {display: block;}
+.sprocket-mosaic-loadmore.load-all .loadmore-more {display: none;}
+.sprocket-mosaic-loadmore.loader .loadmore-more, .sprocket-mosaic-loadmore.loader .loadmore-text { display:none; }
+.sprocket-mosaic-loadmore.loader span {display:block;margin:0 auto;}
+.sprocket-mosaic-loadmore .loadmore-info, .sprocket-mosaic-loadmore .loadmore-text,
+.sprocket-mosaic-loadmore .loadmore-info:hover, .sprocket-mosaic-loadmore .loadmore-text:hover {background-color: transparent !important;border: 0;margin: 0; padding: 0;}
+
+/* Spinner Images */
+.sprocket-mosaic-loadmore.loader span:before {font-family: FontAwesome;content: "\f013";font-size: 35px;display: block;margin: 10px auto;width: 30px;text-shadow: none;}
+.sprocket-mosaic-overlay .css-loader:before {color: #fff;font-family: FontAwesome;content: "\f110";font-size: 60px;display: block;margin: 20px auto;width: 53px;text-shadow: none;}
+.sprocket-mosaic-loadmore.loader span, .sprocket-mosaic-overlay .css-loader {-webkit-animation: rotate 1s linear infinite;-moz-animation: rotate 1s linear infinite;-ms-animation: rotate 1s linear infinite;-o-animation: rotate 1s linear infinite;animation: rotate 1s linear infinite;}
+
+/* Tweaks */
+.sprocket-mosaic-item {margin: 10px;} /* Margin defines the Gutter size. The actual gutter size is doubled. To have 10 for example, you need margin: 5px; */
+.sprocket-mosaic .sprocket-mosaic-container {margin: -10px;} /* Whatever is the gutter size, the container has to be negativiley applied in order too loose first and last columns margins */
+
+/* Spinner Rotator Keyframes */
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes rotate {
+  from {-ms-transform: rotate(0deg);}
+  to {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes rotate {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(360deg);}
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* Custom stuff */
+.sprocket-mosaic-filter li, .sprocket-mosaic-order li {color: #ffffff;background: rgba(0, 0, 0, 0.5);opacity: 0.7;}
+.sprocket-mosaic-filter li.active, .sprocket-mosaic-order li.active {opacity: 1;}
+.sprocket-mosaic .sprocket-mosaic-tags li {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
+.sprocket-mosaic-loadmore {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
+.sprocket-mosaic-hover {background: rgba(0, 0, 0, 0.5);opacity: 0;}
+.sprocket-mosaic-image-container:hover .sprocket-mosaic-hover {opacity: 1;}
+.sprocket-mosaic-hovercontent {color: #ffffff;opacity: 0;visibility: hidden;}
+.sprocket-mosaic-image-container:hover .sprocket-mosaic-hovercontent {opacity: 1;visibility: visible;}
+.sprocket-mosaic-hover, .sprocket-mosaic-hovercontent {-webkit-transition: opacity 0.1s ease-in;-moz-transition: opacity 0.1s ease-in;-o-transition: opacity 0.1s ease-in;-ms-transition: opacity 0.1s ease-in;transition: opacity 0.1s ease-in;}

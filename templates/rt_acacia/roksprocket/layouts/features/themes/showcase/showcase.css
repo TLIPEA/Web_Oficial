@@ -1,0 +1,47 @@
+/**
+ * @version   $Id: showcase.css 14031 2013-10-01 23:20:20Z rhuk $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+/* Features - Layout Showcase - Core */
+.layout-showcase {position: relative;margin: 0 80px;-webkit-transform: translateZ(0);}
+.layout-showcase:after {display: table;content: "";*zoom: 1;clear: both;}
+.layout-showcase ul {list-style: none !important;margin: 0;padding: 0;}
+
+/* Features - Layout Showcase - Content */
+.pagination-active {margin-bottom: 35px;}
+.layout-showcase .sprocket-features-list {position: relative;overflow: hidden;padding: 0 0 10px 0 !important;}
+.layout-showcase .sprocket-features-list li {position: absolute;top: 0;left: 0;opacity: 0;width: 100%;height: 100%;display: block;}
+.layout-showcase .sprocket-features-list li.active {position: relative;height: auto;opacity: 1;display: block;z-index: 10;}
+.layout-showcase .sprocket-features-content, .layout-showcase .sprocket-features-img-container {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; padding: 0 15px;}
+.layout-showcase .sprocket-features-img-container {float: right;width: 50%;}
+.layout-showcase .sprocket-features-content {float: left;width: 50%;}
+.layout-showcase .sprocket-features-title {font-size: 2.5em;margin: 0;padding: 0;line-height: 50px;}
+.layout-showcase .sprocket-features-desc {font-size: 1.5em;line-height: 35px;margin-top: 10px;}
+.layout-showcase .readon {margin: 15px 0 0 0;display: table;font-size: 1rem;}
+
+/* Features - Layout Showcase - Navigation */
+.layout-showcase .sprocket-features-arrows .arrow {position: absolute;display: block;width: 40px;height: 40px;top: 50%;margin-top: -12px;cursor: pointer;z-index: 10;text-align: center;font-size: 24px;line-height: 38px;opacity: 0.7;-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;}
+.layout-showcase .sprocket-features-arrows .arrow span {display: none;}
+.layout-showcase .sprocket-features-arrows .prev {left: -80px;}
+.layout-showcase .sprocket-features-arrows .next {right: -80px;}
+.layout-showcase .sprocket-features-arrows .arrow:hover {opacity: 1;}
+.layout-showcase .sprocket-features-arrows .arrow.next:before {content: '\f105';font-family: FontAwesome;}
+.layout-showcase .sprocket-features-arrows .arrow.prev:before {content: '\f104';font-family: FontAwesome;}
+.sprocket-features.arrows-onhover .sprocket-features-arrows .arrow {opacity: 0 !important;}
+.sprocket-features.arrows-onhover:hover .sprocket-features-arrows .arrow {opacity: 1 !important;}
+.layout-showcase .sprocket-features-pagination {position: absolute;left: 50%;margin-left: -20px;margin-top: 15px;z-index: 10;}
+.layout-showcase .sprocket-features-pagination-hidden {display: none;}
+.layout-showcase .sprocket-features-pagination li {display: inline-block;padding: 7px;margin: 0 3px;opacity: 0.8;border-radius: 1em;cursor: pointer;}
+.layout-showcase .sprocket-features-pagination li.active {opacity: 1;}
+.layout-showcase .sprocket-features-pagination li span {display: none;font-size: 0.85em;line-height: 1em;}
+
+/* Features - Layout Showcase - Transitions */
+.layout-showcase .sprocket-features-pagination li, .layout-showcase .sprocket-features-arrows .arrow {-webkit-transition: opacity 0.2s ease-in;-moz-transition: opacity 0.2s ease-in;-o-transition: opacity 0.2s ease-in;transition: opacity 0.2s ease-in;}
+
+/* Custom */
+.layout-showcase .sprocket-features-arrows .arrow {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
+.layout-showcase .sprocket-features-pagination li {background: rgba(0, 0, 0, 0.7);}
+.layout-showcase .sprocket-features-pagination li.active {background: #000000;}

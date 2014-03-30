@@ -1,0 +1,123 @@
+/**
+* @version   $Id: comingsoon.less 12813 2013-08-16 21:57:09Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+@import "variables.less";
+@import "mainbody-@{main-body-style}.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+
+.rt-comingsoon-logo {
+	padding-top: 50px;
+	#rt-logo {
+		margin: 0 auto;
+	}	
+}
+.rt-sitename {
+	font-size: 3em;
+	line-height: 1em;
+	margin: 30px auto 0 auto;
+	text-align: center;
+	font-family: @acacia-font-bold !important;
+}
+#rt-comingsoon-counter {
+	text-align: center;
+	.number, .word {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	.number {
+		font-size: 3.5em;
+		margin: 25px auto;
+		font-family: @acacia-font-bold;
+	}
+	.word {
+		font-size: 1.5em;
+		font-family: @acacia-font-regular;
+	}
+	.counter-block {
+		display: inline-block;
+		margin: 50px 25px 0 25px;
+		padding: 25px;
+		width: 100px;
+		height: 120px;
+		border-radius: 10px;
+		border: 1px solid darken(@white, 18%);
+		#gradient > .vertical(darken(@white, 15%), @white);
+		box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.8);
+	}
+}
+.rt-comingsoon-additional-message {
+	color: @white;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+	width: 60%;
+	margin: 50px auto;
+}	
+.rt-comingsoon-form {
+    margin: auto;
+    padding-bottom: 80px;
+    text-align: center;
+    width: 80%;
+	.inputbox {
+		color: @white;
+		border: 1px solid fadeout(@white, 70%);
+		#gradient > .horizontal(fadeout(@white, 80%), fadeout(@white, 80%));
+		width: 30%;
+		font-size: 1.5em;
+		padding: 15px;
+	}
+	.readon {
+	    font-size: 1.5em;
+	    padding: 15px 25px;
+	}    
+}
+
+// Tablet Modes
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body.layout-mode-responsive {
+		#rt-comingsoon-counter {
+			.number {
+				font-size: 3em;
+				margin: 20px auto;
+				font-family: @acacia-font-bold;
+			}
+			.word {
+				font-size: 1em;
+				font-family: @acacia-font-regular;
+			}
+			.counter-block {
+				display: inline-block;
+				margin: 50px 15px 0 15px;
+				padding: 25px;
+				width: 80px;
+				height: 100px;
+				border-radius: 10px;
+				border: 1px solid darken(@white, 18%);
+				#gradient > .vertical(darken(@white, 15%), @white);
+				box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.8);
+			}
+			.rt-comingsoon-form {
+				width: 100%;
+			}	
+		}		
+	}
+}		
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body.layout-mode-responsive {
+		.rt-comingsoon-form {
+			.inputbox, .readon {
+			    display: block;
+			    margin: 15px auto;
+			    padding: 15px;
+			    width: 90%;
+    		}
+		}	
+	}
+}		

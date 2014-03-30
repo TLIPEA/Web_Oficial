@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="system" method="upgrade" type="plugin" version="2.5">
+	<name>System - RokBox</name>
+	<author>RocketTheme, LLC</author>
+	<creationDate>March 4, 2014</creationDate>
+	<copyright>(C) 2005 - 2014 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<version>2.0.7</version>
+	<description><![CDATA[
+        <div class="rokbox-description">
+        <img src="../plugins/system/rokbox/assets/admin/images/rokbox.jpg" class="img-padding" /><h1>RokBox2</h1>
+        <p>RokBox2 is a fully responsive modal pop-up plug-in for Joomla.  It displays <strong>images</strong>, <strong>videos</strong>, <strong>embedded widgets</strong>, <strong>Ajax content</strong> and <strong>Joomla modules</strong>.</p>
+
+        <p>RokBox2 contains a <strong>Content plug-in</strong> and <strong>Button Editor plug-in</strong>. The <strong>Content plug-in</strong> can auto-generate thumbnails of <strong>local images</strong> that can be used as content for your RokBox2 links. All thumbnails generated are <strong>responsive</strong> so that they can easily adapt to any device. The <strong>Button Editor plug-in</strong> allows for easy creation of RokBox2 style snippets with just a few clicks.</p>
+        <p>RokBox2 also provides backward compatibility for RokBox1 style <code>{rokbox}</code> syntax.</p>
+
+        <h2>Key Features:</h2>
+        <ul class="features">
+            <li>HTML5 and CSS3</li>
+            <li>Fully Responsive</li>
+            <li>Auto thumbnails generator</li>
+            <li>Captions supporting HTML syntax</li>
+            <li>Ajax Content listener</li>
+            <li>Multiple media types supported:
+                <ul class="features">
+                    <li>Images: base64 encoded, jpg, gif, png, bmp, webp</li>
+                    <li>HTML5 Video and Audio</li>
+                    <li>TwitPic</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                    <li>Vimeo</li>
+                    <li>Telly (ex TwitVid)</li>
+                    <li>Metacafe</li>
+                    <li>Dailymotion</li>
+                    <li>Spotify</li>
+                    <li>Google Maps</li>
+                </ul>
+            </li>
+            <li>Fit/Unfit Screen: If an image is too big it gets shrunk to fit the view-port but you can always click the Fit Screen icon to expand it and scroll.</li>
+            <li>Albums to group related images</li>
+            <li>Key Bindings for easy navigation: <code>&larr;</code> (Previous), <code>&rarr;</code> (Next), <code>f</code> Fitscreen/Unfitscreen, <code>esc</code> Close</li>
+        </ul>
+
+        <p class="note"><strong>NOTE:</strong> RokBox2 consists of 3 plug-ins: <strong>Content</strong>, <strong>System</strong> and <strong>Editor Button</strong>. Make sure to have a look at all three plug-in manager pages to get an idea of what they do.</p>
+        </div>
+        ]]></description>
+	<updateservers>
+		<server name="RocketTheme Update Directory" priority="1" type="collection">http://updates.rockettheme.com/joomla/updates.xml</server>
+	</updateservers>
+	<files>
+		<folder>assets</folder>
+        <folder>fields</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename plugin="rokbox">rokbox.php</filename>
+        <folder>lib</folder>
+    </files>
+    <config>
+		<fields name="params">
+
+			<fieldset addfieldpath="/plugins/system/rokbox/fields" name="core">
+				<field type="init"/>
+                <!--<field name="viewport_pc" type="rokboxlist" default="80" label="ROKBOX_LABEL_VIEWPORT_PC"
+                       description="ROKBOX_DESC_VIEWPORT_PC">
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                    <option value="40">40%</option>
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="70">70%</option>
+                    <option value="80">80%</option>
+                    <option value="90">90%</option>
+                    <option value="100">100%</option>
+                </field>-->
+                <field default="0" description="ROKBOX_DESC_BACKWARDS_COMPAT" label="ROKBOX_LABEL_BACKWARDS_COMPAT" name="backwards_compat" type="rokboxlist">
+                    <option value="0">Disable</option>
+                    <option value="1">Enable</option>
+                </field>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

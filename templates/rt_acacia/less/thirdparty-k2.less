@@ -1,0 +1,863 @@
+/**
+ * @version   $Id: thirdparty-k2.less 12813 2013-08-16 21:57:09Z arifin $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Latest View (Latest Items from one or more users or categories) */
+body #k2Container.latestView {
+	.k2FeedIcon {position: absolute; margin: 10px 0 0 10px; padding: 0;}
+	.latestItemsCategory {
+		background: none; margin: 0; padding: 0; border: 10px solid transparent;
+
+		img {background: none; margin: 0; padding: 0; max-width: 100%; border: 1px solid rgba(0, 0, 0, 0.4);}
+		h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em; margin: 15px 0;margin: 0 0 15px; padding: 15px 0 0 0; background: none;}
+		h2 a {padding: 10px 0;}
+		h2:before {font-family: FontAwesome; content: ""; margin-right: 10px; font-size: 1.0em; color: rgba(0,0,0,0.8); position: inherit; background: none; border: none; text-shadow: none; box-shadow: none; transform: none; right: 0;}	
+	}
+	.latestItemList {
+		background: none; margin: 0 0 20px 0; padding: 0; border: 10px solid transparent;
+
+		h2 {display: block; font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.5em; font-weight: normal; line-height: 1.4em; margin: 0 0 5px 0;}
+		.latestItemDateCreated {
+			&:before {font-family: FontAwesome; content: "";}
+			display: block; font-size: 0.9em; margin-bottom: 10px;
+		}
+		.latestItemBody {margin: 0; padding: 0;}
+		.latestItemImageBlock {margin:0; padding: 0; float: none;}
+		.latestItemImage {background: none; margin: 0; padding: 0;}
+		.latestItemImage img {background: none; margin: 0 0 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+		.latestItemIntroText {margin: 0; padding: 0;}
+		.latestItemCategory {
+			font-size: 0.9em; line-height: 1.0em; border: 0;
+			span {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+			}
+			a {font-size: 1.0em;}
+		}
+		.latestItemTagsBlock {
+			font-size: 0.9em; line-height: 1.0em; border: 0;
+			span {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+			}
+			a {font-size: 1.0em;}
+		}
+		.latestItemLinks {margin: 0 0 15px 0;}
+		.latestItemReadMore {
+			display: block;
+
+			.k2ReadMore {				
+				display: inline-block;	
+			}
+		}
+	}
+}
+
+/* Item List View (Categories) */
+body #k2Container.itemListView {
+	.k2FeedIcon {position: absolute; margin: 20px 0 0 20px; padding: 0;}
+	.itemListCategory {
+		background: none; margin: 0; padding: 0; border: 10px solid transparent;
+
+		img {background: none; margin: 0; padding: 0; max-width: 100%; float: none; border: 1px solid rgba(0, 0, 0, 0.4);}
+		h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em; position: relative;margin: 0 0 15px; padding: 15px 0 0 0; background: none;}
+		h2:before {font-family: FontAwesome; content: ""; margin-right: 10px; font-size: 0.85em; color: rgba(0,0,0,0.8); position: inherit; border: none; background: none; text-shadow: none; box-shadow: none; transform: none; right: 0;}
+	}
+	.itemListSubCategories {
+		h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; text-transform: uppercase; font-size: 1.5em; font-weight: normal; line-height: 1.0em; margin: 0 0 5px 5px; padding: 0;}	
+
+		.subCategory {
+			background: none; margin: 0 0 15px 0; padding: 0; border: 10px solid transparent;
+			img {background: none; margin: 0; padding: 0; max-width: 100%; border: 1px solid rgba(0, 0, 0, 0.4);}
+			h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em;margin: 0 0 15px; padding: 15px 0 0 0; background: none;}
+			h2 a {padding: 10px 0;}
+			h2:before {font-family: FontAwesome; content: ""; margin-right: 10px; font-size: 0.85em; color: rgba(0,0,0,0.8); position: inherit; border: none; background: none; text-shadow: none; box-shadow: none; transform: none; right: 0;}
+		}	
+	}
+
+	.itemList {
+		#itemListLeading {
+			.catItemView {background: none; margin: 0; padding: 0; border: 10px solid transparent;}
+			.catItemDateCreated {
+				&:before {font-family: FontAwesome; content: "";}
+				display: block; font-size: 0.9em; margin: 15px 0 0 0;			
+			}
+			h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.6em; margin: 0 0 5px 0; padding: 0;}
+			.catItemAuthor {
+				&:before {font-family: FontAwesome; content: "";}
+				display: block; font-size: 0.9em; margin: 0px;				
+			}
+			.catItemBody {margin: 0; padding: 0;}
+			.catItemImageBlock {margin: 0; padding: 0; float: none;}
+			.catItemIntroText {margin: 0; padding: 0;}
+			.catItemLinks {margin: 0; padding: 0;}
+			.catItemImage img {margin: 10px 0 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+			.catItemCategory {
+				font-size: 0.9em; line-height: 1.0em; border: 0;
+				span {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+				}
+				a {font-size: 1.0em;}
+			}
+			.catItemTagsBlock {
+				font-size: 0.9em; line-height: 1.0em; border: 0;
+				span {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+				}
+				a {font-size: 1.0em;}
+			}
+			.catItemCommentsLink {
+				font-size: 0.9em; line-height: 1.0em; border: 0; margin: 0; padding: 0; display: block;
+				a {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 2px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 4px;				
+				}
+			}
+			.catItemReadMore {
+				display: block; margin: 15px 0;
+
+				.k2ReadMore {					
+					display: inline-block;		
+				}
+			}			
+		}
+
+		#itemListPrimary {
+			.catItemView {background: none; margin: 0; padding: 0; border: 10px solid transparent;}
+
+			.catItemDateCreated {
+				&:before {font-family: FontAwesome; content: "";}
+				display: block; font-size: 0.9em; margin: 15px 0 0 0;			
+			}
+			h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.2em; margin: 0; padding: 0;}
+			.catItemAuthor {
+				&:before {font-family: FontAwesome; content: "";}
+				display: block; font-size: 0.9em; margin: 0px;				
+			}
+			.catItemBody {margin: 0; padding: 0;}
+			.catItemImageBlock {margin: 0; padding: 0; float: none;}
+			.catItemIntroText {margin: 0; padding: 0;}
+			.catItemLinks {margin: 0; padding: 0;}
+			.catItemImage img {margin: 10px 0 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+			.catItemCategory {
+				font-size: 0.9em; line-height: 1.0em; border: 0;
+				span {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+				}
+				a {font-size: 1.0em;}
+			}
+			.catItemTagsBlock {
+				font-size: 0.9em; line-height: 1.0em; border: 0;
+				span {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+				}
+				a {font-size: 1.0em;}
+			}		
+			.catItemCommentsLink {
+				font-size: 0.9em; line-height: 1.0em; border: 0; margin: 0; padding: 0; display: block;
+				a {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 2px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 4px;				
+				}
+			}
+			.catItemReadMore {
+				display: block; margin: 15px 0;
+
+				.k2ReadMore {					
+					display: inline-block;		
+				}
+			}					
+		}
+
+		#itemListSecondary {
+			.catItemView {background: none; margin: 0; padding: 0; border: 10px solid transparent;}
+			
+			.catItemDateCreated {
+				&:before {font-family: FontAwesome; content: "";}
+				display: block; font-size: 0.9em; margin: 15px 0 0 0;		
+			}
+			h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.2em; margin: 0; padding: 0;}
+			.catItemAuthor {
+				&:before {font-family: FontAwesome; content: "";}
+				display: block; font-size: 0.9em; margin: 0px;			
+			}
+			.catItemBody {margin: 0; padding: 0;}
+			.catItemImageBlock {margin: 0; padding: 0; float: none;}
+			.catItemIntroText {margin: 0; padding: 0;}
+			.catItemLinks {margin: 0; padding: 0;}
+			.catItemImage img {margin: 10px 0 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+			.catItemCategory {
+				font-size: 0.9em; line-height: 1.0em; border: 0;
+				span {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+				}
+				a {font-size: 1.0em;}
+			}
+			.catItemTagsBlock {
+				font-size: 0.9em; line-height: 1.0em; border: 0;
+				span {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+				}
+				a {font-size: 1.0em;}
+			}		
+			.catItemCommentsLink {
+				font-size: 0.9em; line-height: 1.0em; border: 0; margin: 0; padding: 0; display: block;
+				a {
+					&:before {font-family: FontAwesome; content: ""; margin-right: 2px;}
+					display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 4px;				
+				}
+			}
+			.catItemReadMore {
+				display: block; margin: 15px 0;
+
+				.k2ReadMore {					
+					display: inline-block;				
+				}
+			}					
+		}
+
+	}
+}
+
+/* Tag View (Tag Page) */
+body #k2Container.tagView {
+	.k2FeedIcon {position: absolute; margin: 0; padding: 0; right: 15px;}
+	.tagItemBody {margin: 0; padding: 0;}
+	.tagItemView {
+		background: none; margin: 0; padding: 0; border: 10px solid transparent;
+		.tagItemDateCreated {
+			&:before {font-family: FontAwesome; content: "";}
+			display: block; font-size: 0.9em; margin: 0 0 5px 0;		
+		}
+		h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.2em; margin: 0; padding: 0;}	
+		.tagItemImageBlock {margin: 0; padding: 0; float: none;}
+		.tagItemImage {margin: 0;}
+		.tagItemImage img {margin: 10px 0 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+		.tagItemCategory {
+			font-size: 0.9em; line-height: 1.0em; border: 0;
+			span {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+			}
+			a {font-size: 1.0em;}
+		}
+		.tagItemReadMore {
+			display: block; margin: 15px 0;
+
+			.k2ReadMore {				
+				display: inline-block;			
+			}
+		}		
+	}
+}
+
+/* User View (User Page) */
+body #k2Container.userView {
+	.k2FeedIcon {position: absolute; margin: 0; padding: 0; right: 15px;}
+	.userBlock {
+		background: none; margin: 0 0 15px 0; padding: 0; border: 10px solid transparent;
+		h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.2em; margin: 0; padding: 0;}	
+		img {background: none; margin-right: 15px; border: 0;}
+	}
+	.userItemList {
+		background: none; margin: 0; padding: 0; border: 10px solid transparent;
+		.userItemView {margin-bottom: 25px;}
+		.userItemDateCreated {
+			&:before {font-family: FontAwesome; content: "";}
+			display: block; font-size: 0.9em; margin: 0 0 5px 0;		
+		}
+		h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.2em; margin: 0; padding: 0;}	
+		.userItemImage {margin: 0;}
+		.userItemBody {margin: 0; padding: 0;}
+		.userItemImageBlock {margin: 0; padding: 0; float: none;}
+		.userItemIntroText {margin: 0; padding: 0;}
+		.userItemLinks {margin: 0; padding: 0;}		
+		.userItemImage img {margin: 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+		.userItemCategory {
+			font-size: 0.9em; line-height: 1.0em; border: 0;
+			span {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+			}
+			a {font-size: 1.0em;}
+		}		
+		.userItemTagsBlock {
+			font-size: 0.9em; line-height: 1.0em; border: 0;
+			span {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+			}
+			a {font-size: 1.0em;}
+		}		
+		.userItemCommentsLink {
+			font-size: 0.9em; line-height: 1.0em; border: 0; margin: 0; padding: 0; display: block;
+			a {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 2px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 4px;				
+			}
+		}
+		.userItemReadMore {
+			display: block; margin: 15px 0;
+
+			.k2ReadMore {				
+				display: inline-block;			
+			}
+		}	
+	}
+}
+
+/* Generic View (Generic Page, e.g: Calendar Page) */
+body #k2Container.genericView {
+	.k2FeedIcon {position: absolute; margin: 0; padding: 0; right: 15px;}
+	.genericItemBody {margin: 0; padding: 0;}
+	.genericItemView {
+		background: none; margin: 0; padding: 0; border: 10px solid transparent;
+		.genericItemDateCreated {
+			&:before {font-family: FontAwesome; content: "";}
+			display: block; font-size: 0.9em; margin: 0 0 5px 0;		
+		}
+		h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.2em; margin: 0; padding: 0;}	
+		.genericItemImageBlock {margin: 0; padding: 0; float: none;}
+		.genericItemImage {margin: 0;}
+		.genericItemImage img {margin: 10px 0 5px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+		.genericItemCategory {
+			font-size: 0.9em; line-height: 1.0em; border: 0;
+			span {
+				&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+				display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+			}
+			a {font-size: 1.0em;}
+		}
+		.genericItemReadMore {
+			display: block; margin: 15px 0;
+
+			.k2ReadMore {				
+				display: inline-block;			
+			}
+		}		
+	}
+}
+
+/* Item View (Single Item) */
+body #k2Container.itemView {
+	background: none; margin: 0; padding: 0; border: 10px solid transparent;
+	.itemDateCreated {
+		&:before {font-family: FontAwesome; content: "";}
+		display: block; font-size: 0.9em; margin: 0;		
+	}
+	h2 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 1.6em; margin: 0; padding: 0;}	
+	.itemAuthor {
+		&:before {font-family: FontAwesome; content: "";}
+		display: block; font-size: 0.9em; margin: 10px 0 0;				
+	}
+	.itemToolbar .clr, .itemRatingBlock .clr {display: none;}
+	.itemToolbar {
+		background: none; margin: 10px 0; padding: 0; border: 0; width: 50%; float: left;
+		ul {text-align: left;}
+		ul li {margin: 0; padding: 0 10px 0 0; border: 0;}
+		.itemTextResizerTitle {
+			text-transform: capitalize;
+			&:before {font-family: FontAwesome; content: ""; margin-right: 4px;}	
+		}
+		.itemPrintLink:before {font-family: FontAwesome; content: ""; margin-right: 2px;}
+		.itemEmailLink:before {font-family: FontAwesome; content: ""; margin-right: 2px;}
+		.itemCommentsLink:before {font-family: FontAwesome; content: ""; margin-right: 2px;}		
+		a#fontDecrease {
+			img {display: none; background: none;}
+			&:after {font-family: FontAwesome; content: ""; margin: 0 2px;}
+		}
+		a#fontIncrease {
+			img {display: none; background: none;}
+			&:after {font-family: FontAwesome; content: ""; margin: 0 2px;}
+		}	
+	}
+	.itemRatingBlock {
+		margin: 10px 0; padding: 0; border: 0; width: 50%; float: left;
+		.itemRatingList, .itemRatingList a:hover, .itemRatingList .itemCurrentRating {background-image: url(../images/k2/k2-transparent-star.png)}
+	}
+	.itemBody {margin: 0; padding: 0; clear: both;}
+	.itemImageBlock {margin:0; padding: 0; float: none;}
+	.itemImage {
+		margin: 0;
+		a.modal {position: inherit; margin: 0; border: 0;}
+		img {margin: 10px 0 15px 0; padding: 0; max-width: 100%; width: 100% !important; border: 1px solid rgba(0, 0, 0, 0.4);}
+	}
+	.itemIntroText {font-size: 1.0em; color: inherit; line-height: 1.7em; padding: 0;}
+	.itemContentFooter {font-size: 0.9em; line-height: 1.0em; border: 0;}
+	.itemLinks {margin: 0 0 15px 0;}
+	.itemCategory {
+		font-size: 0.9em; line-height: 1.0em; border: 0;
+		span {
+			&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+			display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+		}
+		a {font-size: 1.0em;}
+	}		
+	.itemTagsBlock {
+		font-size: 0.9em; line-height: 1.0em; border: 0;
+		span {
+			&:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+			display: inline-block; font-size: 1.0em; font-weight: normal; line-height: 1.2em; padding: 0; width: 100px;
+		}
+		a {font-size: 1.0em;}
+	}	
+	.itemAuthorBlock {
+		background: none; margin: 0 0 15px 0; padding: 0; border: 1px solid transparent;
+		h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em; margin: 0; padding: 0;}	
+		img {background: none; border: 0; margin-bottom: 25px;}
+	}	
+	.itemAuthorLatest{
+		float: left; width: 50%;
+		h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em; margin: 0; padding: 0;}	
+		ul li a {font-size: 1.0em; line-height: 1.0em;}
+		.even {background: none; border: 0;}
+		.odd {background: none; border: 0;}
+	}
+	.itemRelated{
+		float: left; width: 50%;
+		h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em; margin: 0; padding: 0;}	
+		ul li a {font-size: 1.0em; line-height: 1.0em;}
+		.even {background: none; border: 0;}
+		.odd {background: none; border: 0;}
+	}	
+	.itemNavigation {background: none; margin: 0 0 25px 0; padding: 0; border: 0;}
+	.itemComments {
+		clear: both; background: none; margin: 0; padding: 0; border: 0;
+		h3 {font-family: 'NovecentoBold', Helvetica, Arial, sans-serif; font-size: 1.8em; font-weight: normal; line-height: 2.0em; margin: 0; padding: 0;}
+		h3:before {font-family: FontAwesome; content: ""; margin-right: 10px;}
+		.itemCommentsFormNotes {border: 0; margin: 5px 0;}
+		textarea {padding: 5px; width: 100%;}
+		input.inputbox {padding: 5px; width: 50%;}
+		#submitCommentButton {display: block; padding: 10px 15px 10px; margin: 15px 0;}		
+		#formLog {margin: 15px 0; padding: 0}
+		.even {background: none;}
+		.odd {background: none;}	
+		.itemCommentsCounter:before {font-family: FontAwesome; content: ""; margin-right: 5px;}
+		ul.itemCommentsList li {
+			padding: 10px 0;
+			a {text-decoration: none;}
+			img {padding: 5px; margin: 0 10px 15px 0; border: 1px solid rgba(0, 0, 0, 0.5);}
+			p {margin: 0;}
+			.commentDate {font-size: 1.0em;}
+			.commentAuthorName {font-size: 1.0em;}
+			.commentAuthorName a {font-size: 1.0em;}
+		}	
+	}
+}
+
+/* Frontend Editing */
+body.component-body {	
+	.btn [class^="icon-"], .btn [class*=" icon-"] {
+		display: inline-block !important;
+	}
+	ul.simpleTabsNavigation li a {
+		font-size: 12px;
+
+	}
+	#k2FrontendEditToolbar h2 {
+		min-height: 0;
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+	.icon-cancel:before {
+		font-family: FontAwesome !important;
+		content: "\f00d";		
+	}
+	ul.tags {
+		li.tagAdd {
+			margin: 0;
+			padding: 0;
+			input#search-field {
+			    border: none !important;
+			    box-shadow: none !important;
+			    margin: 0;
+			    padding: 0;			
+			}
+		}		
+		li.tagAdded, li.addedTag, li.tagAdd {
+			margin: 5px 0 5px 5px;
+		}
+	}
+	.adminFormK2 input[type="radio"], .adminFormK2 input[type="checkbox"] {
+    	margin: 0 5px;	
+    }
+	hr.sep {
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	div#k2ToggleSidebarContainer {
+		margin-bottom: 13px;
+	}
+	h3.ui-accordion-header span.ui-icon {
+		margin: 12px 10px 0 5px;
+	}
+	input, textarea, select {
+		border: 1px solid #cccccc !important;
+		background: #ffffff !important;
+		color: #333333 !important;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	tr td label {
+		display: inline !important;
+	}
+	.radio input, .checkbox input {
+		float: none;
+		margin: 0 3px 0 0;
+	}
+	table.admintable .input-append input {
+		width: 165px;
+	}
+	td.k2ItemFormDateField img.calendar {
+		vertical-align: middle;
+	}
+	.k2ItemFormEditor {
+		a.btn {
+			padding: 5px 10px;
+			font-size: 11px;
+			background: rgba(255,255,255,0.8);
+			border: 1px solid rgba(0,0,0,0.2);
+		}
+		div.dummyHeight {
+			display: none;
+		}
+		.readmore {
+			box-shadow: none;
+			&:before {
+				background: none;
+				box-shadow: none;
+				content: "";
+			}
+		}
+		#editor-xtd-buttons {
+			float: left;
+			a {
+				color: #000000;
+				text-shadow: none;
+				display: inline-block;
+				padding: 10px 15px !important;
+				height: 15px;
+				line-height: 16px;
+				background: rgba(255,255,255,0.8);
+				border: 1px solid rgba(0,0,0,0.2);
+			}
+			.icon-file-add:before {
+				font-family: FontAwesome !important;
+				content: "\f02d";
+			}
+			.button2-left .article, .button2-left .image, .button2-left .pagebreak, .button2-left div {
+				background-image: none !important;
+				font-family: Arial,Helvetica,sans-serif !important;
+			}
+		}
+		.toggle-editor {
+			margin: 5px 10px;
+			float: right;
+			.button2-left {
+				margin: 0;
+			}
+			a {
+				display: inline-block;
+				line-height: 2.5em;
+				padding: 5px 15px !important;
+				height: 25px;
+				border: 1px solid rgba(0,0,0,0.2);
+			}
+		}
+	}
+	div#k2Frontend table.k2FrontendToolbar td.button {
+		text-shadow: none;
+		box-shadow: none;
+		padding: 5px 10px;
+		&:before {
+			content: "";
+			background: none;
+			box-shadow: none;
+		}
+	}
+	ul.tags li.tagAdd input {
+		margin: 5px;
+	}
+	#adminFormK2Sidebar {
+		#resetHitsButton, #resetRatingButton {
+			text-shadow: none;
+			box-shadow: none;
+			padding: 3px 8px;			
+			font-size: 11px;
+		}
+	}
+	#system-message {
+		.message > ul {
+			background-repeat: no-repeat;
+		}
+		.alert-message {
+			background-color: #C3D2E5;
+			border: 2px solid #84A7DB;
+			color: #0055BB;
+			padding: 15px;
+			h4 {
+				margin-top: 0;
+			}
+			a.close {
+				font-size: 2em;
+				float: right;
+				cursor: pointer;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+#k2Frontend {
+	#toolbar-save.button {
+		&:before {
+			display: none;
+		}
+	}
+}
+
+/* K2 Registration Form */
+body {
+	#k2Container table {
+		tr, th, td {
+			background: none !important;
+			border: 0 !important;
+		}
+		td.key {
+			padding-right: 15px;
+		}
+		input[type="file"] {
+			margin: 5px 0;
+		}
+	}
+	.k2AccountPage table tr td label {
+		display: inline;
+	}
+	.k2AccountPage div.k2AccountPageUpdate {
+		border: none;
+	}	
+	#k2Container {
+		input.inputbox, select, input[type="file"] {
+			border: 1px solid #D9D9D9;
+			background: #ffffff;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		}	
+		input#genderf, input#genderm {
+			float: none;
+			margin: 0 5px 5px 0;
+		}
+		.defaultSkin table.mceLayout {
+			border: 1px solid rgba(0,0,0,0.1);
+		}	
+	}	
+}
+
+/* K2 Tag Cloud */
+body div.k2TagCloudBlock {
+	a {
+		padding: 10px 5px;
+	}
+	a:hover {
+		padding: 10px 5px;
+		background: rgba(0,0,0,0.1);
+		border-radius: 5px;
+	}
+}
+
+/* K2 Tools (Calendar) */
+body .k2CalendarBlock {height: 100%;}
+body .k2CalendarBlock table.calendar {
+	background: none; margin: 0; width: 100%;
+	tr {
+		td {background: rgba(0, 0, 0, 0.05) !important; border: 1px solid rgba(0, 0, 0, 0.15);}
+		.calendarNavMonthPrev, .calendarNavMonthNext {text-align: center;}
+		td.calendarDateLinked a {
+			font-weight: bold;
+			background: #ffffff;
+			&:hover {
+				background: #ffffff;
+				color: inherit;
+			}
+		}
+		td.calendarToday {
+			color: inherit;
+			font-weight: bold;
+			background: #ffffff !important;
+		}
+	}
+
+} 
+
+/* K2 Comments */
+body .k2LatestCommentsBlock {
+	ul {
+		list-style-type: none; margin-left: 0; padding-left: 0;
+		li {padding: 10px 0;}
+		a {font-size: 1.0em;}
+		.even {background: none; border-bottom: 1px dotted rgba(0, 0, 0, 0.5);}
+		.odd {background: none; border-bottom: 1px dotted rgba(0, 0, 0, 0.5);}
+		img {padding: 0; margin: 0 10px 15px 0; border: 0;}
+		.lcComment {display: block;}
+		.lcUsername {font-size: 0.9em;}
+		.lcCommentDate {font-size: 0.9em;}
+	}
+}
+
+/* K2 Extras */
+body #k2Container {
+	.latestItemDateCreated,
+	.latestItemCategory span,
+	.latestItemTagsBlock span,
+	.catItemDateCreated,
+	.catItemAuthor,
+	.catItemCategory span,
+	.catItemTagsBlock span,
+	.tagItemDateCreated,
+	.tagItemCategory span,
+	.userItemDateCreated,
+	.userItemCategory span,
+	.userItemTagsBlock span,
+	.itemDateCreated,
+	.itemAuthor,
+	.itemTextResizerTitle,
+	.itemRatingBlock,
+	.itemRatingBlock span,
+	.itemContentFooter,
+	.itemCategory span,
+	.itemTagsBlock span,
+	.genericItemHeader span,
+	.genericItemCategory span {
+		color: rgba(0, 0,0, 0.5);
+	}
+}	
+
+body #k2Container {
+	input.inputbox {
+		border: 1px solid #D9D9D9;
+	}
+	ul li {
+		.even, .odd {
+			border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+		}
+	}
+	span.itemEditLink {
+		margin: -8px 5px 0 0;
+		a {
+			line-height: 0;
+		}
+	}
+} 
+
+body .box1, body .box2, body .box3, body .box4 {
+	.box1, .box2, .box3, .box4 {
+		/*background: none !important;
+		box-shadow: none !important;
+		border: none !important;*/
+	}
+}
+
+body #k2Container {
+	.userBlock h2:before {
+		display: none;
+	}
+	.tagItemTitle a {
+		padding-left: 0px;
+	}
+	&.itemView .itemHeader h2.itemTitle {
+		line-height: 1.5em;
+		padding-left: 5px;
+		padding-left: 5px;
+	}
+	.genericItemView h2 a {
+		padding-left: 0px;
+	}
+}
+
+// Table Border
+body #k2FrontendContainer {
+	table td {
+		border-color: #e9e9e9;
+	}
+	input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+		height: 30px;
+	}	
+}
+.even, .odd {
+	background: inherit;
+	border-bottom: inherit;
+}
+
+// Modules
+.rt-block[class*="box"] [class*="box"] {
+	box-shadow: none;
+	border: 0;
+}
+
+/* Dark Style */
+body .rt-dark {
+	// General
+	#k2Container {
+		.latestItemDateCreated,
+		.latestItemCategory span,
+		.latestItemTagsBlock span,
+		.catItemDateCreated,
+		.catItemAuthor,
+		.catItemCategory span,
+		.catItemTagsBlock span,
+		.tagItemDateCreated,
+		.tagItemCategory span,
+		.userItemDateCreated,
+		.userItemCategory span,
+		.userItemTagsBlock span,
+		.itemDateCreated,
+		.itemAuthor,
+		.itemTextResizerTitle,
+		.itemRatingBlock,
+		.itemRatingBlock span,
+		.itemContentFooter,
+		.itemCategory span,
+		.itemTagsBlock span,
+		.genericItemHeader span,
+		.genericItemCategory span,
+		.latestItemsCategory h2 a,
+		.itemListCategory h2,
+		.itemListSubCategories .subCategory h2,
+		.itemListSubCategories .subCategory h2 a {
+			color: rgba(255, 255, 255, 0.5) !important;
+		}
+	}	
+	// Heading
+	#k2Container.latestView .latestItemsCategory h2:before,
+	#k2Container.itemListView .itemListCategory h2:before,
+	#k2Container.itemListView .itemListSubCategories .subCategory h2:before {
+		color: rgba(255, 255, 255, 0.5);
+	}
+	// Input
+	#k2Container {
+		input.inputbox, select, input[type="file"] {
+			border: 1px solid #222222;
+			background: #000000;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		}		
+	}
+	// Social Items on Single Article	
+	#k2Container {
+		div.itemSocialSharing {
+			background: #888888;
+			border-radius: 5px;
+			margin: 15px 0;
+			padding: 15px 15px 0;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+		}
+	}
+}

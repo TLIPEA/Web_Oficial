@@ -1,0 +1,23 @@
+.admin-rokcandy .col {
+	color:#333;
+	float: left;
+}
+
+.admin-rokcandy #published {margin-top:0;}
+
+td.macro {
+	color: #c00;
+}
+
+div.width-60 li.tip {
+	background:#ffe;
+	font-size: 110%;
+	padding: 10px;
+	max-width: inherit;
+}
+
+.icon-48-rokcandy { background:url(rokcandy-icon-48.png) no-repeat;}
+
+textarea.inputbox.rokcandy {
+    width: 90%;
+}

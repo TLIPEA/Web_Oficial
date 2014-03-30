@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="editors-xtd" method="upgrade" type="plugin" version="2.5">
+	<name>Button - RokBox</name>
+	<creationDate>March 4, 2014</creationDate>
+	<author>RocketTheme, LLC</author>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<copyright>(C) 2005 - 2014 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>2.0.7</version>
+	<description>This is an Editor Button to allow injection of RokBox snippets into your Content</description>
+	<files>
+		<folder>assets</folder>
+        <folder>views</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename plugin="rokbox">rokbox.php</filename>
+    </files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_editors-xtd_rokbox.ini</language>
+	</languages>
+</extension>

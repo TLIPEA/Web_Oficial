@@ -1,0 +1,11 @@
+/**
+* @version   $Id: master-ie10.css 13956 2013-09-30 19:28:09Z kevin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Menu Module */
+body .menu-block .gf-menu.l1 > li > .item {display: block;height: 35px;padding-top: 10px;}
+body .menu-block .gf-menu .dropdown li.parent > .dropdown-spacer:before {right: 5px;}
+body .menu-block .gf-menu .dropdown {box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;}

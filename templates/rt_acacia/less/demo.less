@@ -1,0 +1,1056 @@
+/**
+* @version   $Id: demo-styles.less 12813 2013-08-16 21:57:09Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+@import "variables.less";
+@import "mainbody-@{main-body-style}.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+
+// Long Shadows
+.longshadow {
+	position: absolute;
+	height: 190px;
+	width: 250px;
+	left: 70px;
+	top: 100px;
+	.rotate(45deg);
+	#gradient > .horizontal(rgba(0,0,0,0.15), rgba(0,0,0,0));
+	z-index: 1;
+}
+
+// Demo Canvas
+@canvas-color-1: #CABBA4;
+@canvas-color-2: #666E81;
+@canvas-color-3: #C6BCB0;
+@canvas-color-4: #8FC7E8;
+@canvas-color-5: #85868A;
+@canvas-color-6: #232428;
+@canvas-color-7: #95969B;
+@canvas-color-8: #88B6AB;
+
+.canvasStyle (@index) when (@index > 0) {
+	(~"[class*=preset@{index}]") {
+		.canvas-graph {
+			color: @main-accent;
+		}
+		.fp-roksprocket-showcase, .fp-roksprocket-tabs {
+			.canvas-middle {
+				background: ~"@{canvas-color-@{index}}";
+				border: 1px solid ~"@{canvas-color-@{index}}";
+			}
+			[class^="icon-"]:before, [class*=" icon-"]:before {
+				color: @white;
+			}
+		}
+	}
+	.canvasStyle (@index - 1);
+}
+.canvasStyle (8);
+
+.canvas-pc {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -22px;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #fff !important;
+}
+
+// General Demo Image
+.rt-image {
+	position: relative;
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 10px;
+		border: 1px solid @body-border;
+	}
+}
+
+// Showcase Bottom Margin
+.-oct13-home {
+	#rt-showcase-surround {
+		overflow: hidden;
+	}
+	#rt-feature {
+		clear: both;
+		margin-top: -110px;
+		padding-top: 50px;
+	}
+}
+
+// RokAjaxSearch
+.fp-rokajaxsearch {
+	&.rt-block {
+	    margin: 8px 0 0;
+	    padding: 15px 0;
+	}
+	.inputbox {
+		width: 130px;
+		background: none;
+		.box-shadow(none);
+	}
+}
+
+// RokSprocket Features
+.fp-roksprocket-showcase {
+	position: relative;
+	z-index: 10;
+	.layout-showcase {
+		.sprocket-features-content {
+			width: 65%;
+		    float: none;
+		    margin: auto;
+		    padding: 0;
+		    position: relative;		
+		}
+		.sprocket-features-title {
+			text-align: center;
+			font-family: @acacia-font-bold;
+			font-size: 3em;
+			margin: 10px 0 40px 0;
+			line-height: 45px;
+		}
+		.sprocket-features-desc {
+			color: @dark-grey;
+			background: @white;
+			padding: 15px;
+		    border: 1px solid #eeeeee;
+		    border-radius: 10px;
+		    .box-shadow(0 2px 1px rgba(0, 0, 0, 0.1));
+			&:before {
+				color: @white;
+				font-family: FontAwesome;
+				content: "\f0d8";
+				font-size: 60px;
+				position: absolute;
+				top: 110px;
+				left: 50%;
+				margin-left: -15px;
+				text-shadow: -1px -2px 2px rgba(0, 0, 0, 0.05);
+			}
+		}
+		.rt-sprocket-readon {
+		    display: table;
+		    margin: 15px auto;
+		}		
+		.readon, .readon2 {
+		    font-size: 1em;
+		    padding: 15px 25px;
+		    display: inline-block;
+		    margin: 0 5px;
+		    &:after {
+				font-family: FontAwesome;
+				margin-left: 15px;	    	
+		    }
+		}
+		.readon:after {
+			content: "\f090";
+		}
+		.readon2:after {
+			content: "\f080";
+		}		
+	}
+}
+
+// MainBottom & Bottom
+.fp-mainbottom, .fp-bottom {
+	&.rt-block {
+		margin-bottom: -20px;
+		padding-bottom: 0;
+	}
+}
+
+// RokSprocket Tabs
+.fp-roksprocket-tabs {
+	.readon {
+		margin-top: 5px;
+		margin-left: 40% !important;
+		position: relative;
+		left: 15px;
+	}
+}
+
+// RokSprocket List
+.fp-roksprocket-lists {
+	&.rt-block {
+    	margin: 40px 10px 10px 10px;
+    	padding: 0 0 30px 0;	
+    	.box-shadow(none);
+	}
+	.module-title {
+		border-bottom: 1px solid #e2e2e2;
+	}
+	.title {
+		padding: 0 15px;
+	}
+	.sprocket-lists-container {
+		margin-top: 0 !important;
+	}
+	.sprocket-lists-title {
+		padding: 10px 15px;
+		.indicator {
+			right: 15px;
+		}		
+	}
+	.sprocket-lists-item .sprocket-padding {
+		padding: 0 15px;
+	}
+}
+
+// Statistic
+.rt-demo-statistic {
+    padding: 15px;
+}
+.rds-title {
+	font-size: 1.2em;
+	margin-bottom: 15px;
+}
+.rds-separator {
+    border: 1px solid @body-border;
+    margin: 0 -15px;
+}
+.rds-data {
+	margin: 15px 0;
+	[class*="icon"] {
+		font-size: 1.3em;
+		margin-right: 5px;
+		vertical-align: top;
+		&.rds-data-1 {
+			color: #97DBF2;
+		}
+		&.rds-data-2 {
+			color: #DE4E33;
+		}		
+	}
+	> h2 {
+	    line-height: normal;
+	    margin: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.rds-detail {
+	margin: 0 15px;
+	[class*="icon"] {
+	    background: rgba(255, 255, 255, 0.3);
+	    border-radius: 100%;
+	    display: inline-block;
+	    padding: 1px;
+	    vertical-align: middle;
+	    width: 24px;
+	    margin-right: 5px;
+	}
+}
+
+// Footer Logo
+#rt-footer-logo {
+	background: url(../../../images/rocketlauncher/frontpage/footer/logo.png) 0 0 no-repeat;
+	display: block;
+	width: 180px;
+	height: 50px;		
+}
+
+// Footer Login Form
+.rt-footer-login {
+	.inputbox {
+		color: @white;
+		border: 1px solid fadeout(@white, 70%);
+		#gradient > .horizontal(fadeout(@white, 80%), fadeout(@white, 80%));
+		font-size: 1.5em;
+		padding: 10px 15px;
+		height: 35px;
+		margin-bottom: 10px;
+	}
+	#form-login-remember, ul {
+		display: none;
+	}
+	.button {
+		font-size: 1.3em;
+		padding: 10px 25px;
+	}
+}
+
+// Footer Email Form
+.rt-email-form {
+	.inputbox, textarea {
+		color: @white;
+		border: 1px solid fadeout(@white, 70%);
+		#gradient > .horizontal(fadeout(@white, 80%), fadeout(@white, 80%));
+		font-size: 1.5em;
+		padding: 10px 15px;
+		margin-bottom: 10px;
+		width: 100%;
+		display: block;
+	}	
+	.inputbox {
+		height: 35px;
+	}	
+	.button {
+		font-size: 1.3em;
+		padding: 10px 25px;
+	}	
+}
+
+// About Us
+.rt-readon-row {
+    display: block;
+    margin: 30px 0 0;
+    text-align: center;
+	.readon, .readon2 {
+	    font-size: 1.5em;
+	    padding: 15px 25px;
+	    display: inline-block;
+	    margin: 0 5px;
+	}
+}
+.rds-info {
+	margin: 0 5px;
+	[class*="rt-data"] {
+	    display: inline-block;
+	    height: 15px;
+	    margin-right: 5px;
+	    vertical-align: middle;
+	    width: 15px;
+	}
+}
+.rt-data-{
+	&1 {
+		background: #D95240;
+	}
+	&2 {
+		background: #6FC6A0;
+	}
+	&3 {
+		background: #D6A842;
+	}
+	&4 {
+		background: #6FB4C5;
+	}
+	&5 {
+		background: #D49245;
+	}				
+}
+.rt-staff-social, .rt-connect {
+	span {
+		background: lighten(@body-text, 50%);
+	    border-radius: 100%;
+	    display: inline-block;
+	    text-align: center;
+	    width: 30px;
+	    height: 30px;
+	    margin: 10px 5px;	
+	    .transition(background 0.2s ease-in);
+	    &:before {
+	    	font-family: FontAwesome;
+	    	position: relative;
+	    	top: 3px;
+	    	.textColor(lighten(@body-text, 40%));
+	    }
+	    &:hover {
+	    	&:before {
+	    		color: @white;
+	    	}
+			&.rt-facebook {
+				background: #3B5998;
+			}
+			&.rt-twitter {
+				background: #00CAFB;
+			}
+			&.rt-gplus {
+				background: #D23A1D;
+			}
+			&.rt-rss {
+				background: #FF6600;
+			}										    	
+	    }
+	}
+	.rt-facebook {
+		&:before {
+			content: "\f09a";
+		}
+	}
+	.rt-twitter {
+		&:before {
+			content: "\f099";
+		}
+	}
+	.rt-gplus {
+		&:before {
+			content: "\f0d5";
+		}
+	}
+	.rt-rss {
+		&:before {
+			content: "\f09e";
+		}
+	}			
+}
+.rt-connect {
+	span {
+		width: 50px;
+		height: 50px;
+		font-size: 1.5em;
+		#gradient > .vertical(darken(@white, 3%), darken(@white, 10%));
+		&:before {
+			top: 15px;
+		}
+	}
+}
+.rt-about-top {
+	.rt-staff-social {
+		background: lighten(@body-text, 50%);
+	}
+}
+.rt-staff-details {
+    #gradient > .vertical(fadeout(@black, 50%), fadeout(@black, 50%));
+    color: @white;
+    margin-top: -70px;
+    height: 50px;
+    padding: 10px 0;
+    position: relative;
+    h3 {
+    	font-size: 160% !important;
+    	padding-bottom: 5px;
+    }
+    h5 {
+    	font-size: 110% !important;
+    }
+}
+
+// Team
+.rt-team-img {
+	img {
+		border-radius: 100%;
+		box-shadow: 0 0 0 2px @body-background, 0 0 0 3px lighten(@body-border, 10%);
+	}
+}
+.rt-team-img2 {
+	img {
+		border-radius: 0;
+		border: 2px solid @body-background;
+		.box-shadow(0 0 0 1px lighten(@body-border, 10%));
+	}
+}
+
+// Pricing
+.menu-pricing #rt-mainbody-surround {
+	background: @feature-background;
+}
+.rt-pricing-table-title {
+	margin: 0 0 100px 0;
+	padding: 0;
+}
+.rt-table {
+	clear: both;
+	background: @white;
+	margin-top: -135px;
+	border: 1px solid @body-border;
+    border-radius: 10px;
+    .box-shadow(0 0 5px rgba(0, 0, 0, 0.1));	
+}
+.rt-table-header {
+    font-size: 1.5em;
+    font-family: @acacia-font-bold;
+    background: @feature-background;
+	margin: -25px -25px 15px -25px;
+    padding: 25px;    
+    .rt-first-col & {
+    	border-radius: 10px 0 0 0;
+    }
+    .rt-last-col & {
+    	border-radius: 0 10px 0 0;
+    }    
+    .rt-table-highlight & {
+    	color: @white;
+		background: @main-accent2;
+	    margin-top: -26px;
+	    padding: 26px;		
+		box-shadow: 0 -2px 1px darken(@main-accent2, 20%) inset, 0 3px 1px rgba(0, 0, 0, 0.05);   	
+    }
+}
+.rt-table-col {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    border-right: 1px solid @body-border;
+    padding: 25px;
+    &.rt-last-col {
+    	border-right: 0;
+    }
+}
+.rt-table-top {
+    border-bottom: 1px solid @body-border;
+    padding: 15px 0;
+}
+.rt-table-price {
+    font-size: 3em;
+    vertical-align: top;
+}
+.rt-table-decimal {
+    font-size: 1.8em;
+    line-height: 0;
+}
+.rt-table-period {
+    display: block;
+    margin-top: 15px;
+}
+.rt-table-item {
+	display: block;
+	margin: 15px 0;
+}
+.rt-table-bottom {
+    display: block;
+    margin-top: 35px;
+}
+.rt-purchase {
+	&.rt-block {
+		padding: 0 15px;
+		margin: 0 25px 60px;
+		border-radius: 10px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		.box-shadow(0 0 10px rgba(0, 0, 0, 0.1) inset);
+	}
+	.readon2 {
+	    float: right;
+	    font-size: 1.5em;
+	    margin-top: 7px;
+	    margin-right: -7px;
+	    margin-left: -25px;
+	    margin: 7px -7px 7px -25px;
+	    padding: 15px 25px;
+	}	
+}
+
+// Portfolio
+.rt-demo-portfolio {
+	.sprocket-mosaic-item {
+		.sprocket-padding {
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.sprocket-mosaic-image {
+			border-radius: 5px;
+		}
+		.sprocket-mosaic-title {
+			margin-bottom: 0;
+		}
+		.sprocket-mosaic-text {
+			margin-top: 5px;
+		}
+		.sprocket-readmore {
+			display: none;
+		}
+	}
+}
+.rt-demo-clients {
+	.sprocket-strips-content {
+		height: 180px;
+	}
+}
+
+// Contact
+.menu-contact {
+	#rt-mainbody-surround {
+		background-color: @maintop-background;
+		.textColor(@maintop-background);
+	}
+	.contact h3 {
+		display: none;
+	}	
+}
+.customrt-map {
+	margin-bottom: -15px;
+}
+.logoStyle (@index) when (@index > 0) {
+	(~".logo-type-preset@{index}") {
+		#rt-contact-logo {
+			background: url(../images/logo/preset@{index}/logo.png) 0 0 no-repeat;
+			display: block;
+			width: 180px;
+			height: 50px;		
+			margin-bottom: 25px;	
+		}
+	}
+	.logoStyle (@index - 1);
+}
+.logoStyle (8);
+.rt-contact-detail {
+	clear: both;
+}
+.rt-contact-icon {
+	clear: both;
+    float: left;
+    margin: -10px 25px 45px 0;
+    #gradient > .vertical(darken(@feature-background, 20%), darken(@feature-background, 30%));
+    border: 1px solid darken(@feature-background, 35%);
+    border-radius: 100%;
+    span {
+    	color: @white;
+    	font-size: 1.2em;
+	    display: block;
+	    width: 60px;
+	    height: 60px;
+	    line-height: 60px;
+	    text-align: center;
+    }
+}
+.menu-contact .contact-form {
+	margin-top: -15px;
+	legend {
+		font-size: 2em;
+		border-bottom: none;
+		margin-bottom: 0;
+		.textColor(@maintop-background);
+	}	
+	dt {
+		width: 250px;
+	}
+	dd {
+		float: none !important;
+		margin: 0;
+	}
+	label {
+		font-size: 1.5em;
+		margin: 15px 0;
+	}
+	input[type="text"], input[type="email"], textarea {
+	    width: 100%;
+		color: @white;
+		border: 1px solid fadeout(@white, 70%);
+		#gradient > .horizontal(fadeout(@white, 80%), fadeout(@white, 80%));
+		font-size: 1.5em;
+		padding: 15px;
+		margin-bottom: 10px;    
+	}
+	input[type="checkbox"] {
+		margin: 18px 0;
+	}
+	button {
+	    font-size: 1.3em;
+	    padding: 15px 25px;		
+	}
+}
+
+// Demo Typography
+.rt-title-tag {
+	display: block;
+	font-family: @acacia-font-light;
+	font-size: 70%;
+	letter-spacing: normal;
+	margin-top: 5px;
+}
+.rt-intro-text {
+	font-family: @acacia-font-light;
+	font-size: @base-font-size + 8;
+	line-height: @base-line-height + 10;	
+}
+.rt-normal-text {
+	font-size: @base-font-size !important;
+	line-height: @base-line-height !important;
+}
+.promo1 {
+	font-size: @base-font-size * 4;
+	line-height: @base-line-height * 4;
+}
+.promo2 {
+	font-size: @base-font-size * 2;
+	line-height: @base-line-height * 2;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-style: italic;	
+}
+
+// Extras
+.gantry-example {
+	position: relative;
+	margin: 15px 0;
+	padding: 39px 19px 14px;
+	*padding-top: 19px;
+	background-color: @white;
+	border: 1px solid #dddddd;
+	.border-radius(4px);
+	.table, .well, blockquote {
+		margin-bottom: 5px;
+	}
+	.lead {
+		font-size: @base-font-size + 5;
+		line-height: @base-line-height * 1.5
+	}
+	> p:last-child {
+		margin-bottom: 0;
+	}
+	+ .prettyprint {
+		margin-top: -20px;
+		padding-top: 15px;
+	}
+	&:after {
+		content: "Example";
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		padding: 3px 7px;
+		font-size: 12px;
+		font-weight: bold;
+		background-color: #f5f5f5;
+		border: 1px solid #dddddd;
+		color: #9da0a4;
+		.border-radius(4px 0 4px 0);
+		font-style: normal;
+	}
+	.search-query {
+		margin-bottom: 0;
+	}
+}
+form.gantry-example {
+	padding-bottom: 19px;
+}
+.form-actions {
+	background-color: @body-background2;
+	border-top: 1px solid @body-border;
+}
+.help-block, .help-inline {
+	color: @body-text-line;
+}
+
+// Demo Module Layout
+.rt-mbsb-table {
+	.rt-sb-table-col {
+		height: 38px;
+		vertical-align: middle;
+	}
+	.rt-mb-table-col {
+		height: 75px;
+		vertical-align: middle;
+	}
+}
+
+// Demo MediaQueries
+
+// Desktop Modes
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	body.layout-mode-responsive {
+		// RokSprocket Features
+		.fp-roksprocket-showcase .layout-showcase {	
+			.sprocket-features-content {
+				width: 75%;
+			}
+		}		
+
+		// FP Our Statistics
+		.rt-demo-statistic {
+			font-size: 80%;
+		}
+		
+		// Demo Clients Strips
+		.rt-demo-clients {
+			.sprocket-strips-content {
+				height: 138px;
+			}	
+		}
+
+		// Demo Typography
+		.promo1 {
+			font-size: @base-font-size * 3.5;
+			line-height: @base-line-height * 3.5;
+		}
+		.promo2 {
+			font-size: @base-font-size * 1.8;
+			line-height: @base-line-height * 1.8;
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-style: italic;	
+		}		
+	}
+}	
+
+// Tablet Modes
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body.layout-mode-responsive {
+		// Contact
+		.contact-form dd {
+			margin-left: 0;
+		}
+
+		// FP RokAjaxSearch
+		.fp-rokajaxsearch .inputbox {
+			width: 95px !important;
+		}
+
+		// RokSprocket Showcase
+		.fp-roksprocket-showcase .layout-showcase {
+			.sprocket-features-title {
+				font-size: 2.5em;
+			}
+			.sprocket-features-content {
+				width: 80%;
+			}
+			.readon, .readon2 {
+				font-size: 0.8em;
+				padding: 10px 15px;
+			}
+		}
+
+		// Dashed Title
+		.dashed-title .module-title .title:after, .dashed-title .module-title .title:before {
+			width: 25%;
+		}
+
+		// FP Our Statistics
+		.rt-demo-statistic {
+			font-size: 80%;
+		}
+		.rds-data, .rds-title {
+			text-align: center;
+			[class*="icon"] {
+				margin: 0;
+			}
+		}
+
+		// FP RokSprocket Tabs
+		.fp-roksprocket-tabs {
+			.sprocket-tabs-panels {
+				.gantry-width-40 {
+					width: 60%;
+				}
+				.gantry-width-60 {
+					width: 40%;
+				}				
+			}
+		}
+
+		// Demo Clients Strips
+		.rt-demo-clients {
+			.sprocket-strips-content {
+				height: 245px;
+			}
+			.cols-4 > li {
+				width: 48% !important;
+			}	
+		}
+
+		// Footer Logo
+		#rt-footer-logo {
+			background-size: cover;
+			width: 105px;
+			height: 35px;
+		}
+
+		// Demo Typography
+		.promo1 {
+			font-size: @base-font-size * 3;
+			line-height: @base-line-height * 3;
+		}
+		.promo2 {
+			font-size: @base-font-size * 1.5;
+			line-height: @base-line-height * 1.5;
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-style: italic;	
+		}		
+	}
+}
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body.layout-mode-responsive {
+		// RokSprocket Showcase
+		.fp-roksprocket-showcase .layout-showcase {
+			margin: 0 60px;
+			.sprocket-features-list {
+				margin: 0 -40px;
+			}
+			.sprocket-features-title {
+				font-size: 2em;
+			}
+			.readon, .readon2 {
+				display: block;
+				font-size: 0.8em;
+				padding: 10px 15px;
+				margin-top: 15px;
+			}
+		}		
+
+		// Dashed Title
+		.dashed-title .module-title .title:after, .dashed-title .module-title .title:before {
+			display: none;
+		}
+
+		// Hide Statistics
+		&.-oct13-home {
+			#rt-maintop, #rt-expandedtop {
+				display: none;
+			}
+		}
+		
+		// RokSprocket Tabs
+		[class*="sprocket"] .sprocket-tabs-nav li .sprocket-tabs-inner {
+			font-size: 1em;
+		}
+
+		// Demo Clients Strips
+		.rt-demo-clients {
+			.sprocket-strips-container {
+				padding: 35px;
+			}
+			.sprocket-strips-content {
+				height: 245px;
+			}
+		}
+
+		// Footer Login
+		#login-form input[type="text"], #login-form input[type="password"] {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		    height: 60px;
+		}		
+
+		// Pricing
+		.rt-table-col {
+			border-right: 0;
+		}	
+		.rt-first-col .rt-table-header {
+			border-radius: 10px 10px 0 0;
+		}
+		.rt-last-col .rt-table-header {
+			border-radius: 0;		
+		}
+		.rt-purchase {
+			text-align: center;
+			.readon2 {
+				float: none;
+				margin: 15px auto 25px;
+			}
+		}
+
+		// Demo Typography
+		.promo1 {
+			font-size: @base-font-size * 2.8;
+			line-height: @base-line-height * 2.8;
+		}
+		.promo2 {
+			font-size: @base-font-size * 1.3;
+			line-height: @base-line-height * 1.3;
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-style: italic;	
+		}		
+	}
+}
+
+// RokSprocket Showcase
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	body.layout-mode-responsive {
+		.fp-roksprocket-showcase .layout-showcase {
+			.sprocket-features-content {
+				width: 100%;
+			}
+			.arrow:before {
+				font-size: 38px !important;
+			}
+			.sprocket-features-arrows .arrow {
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				margin-top: 0;
+				&.prev {
+					left: -70px;
+				}
+				&.next {
+					right: -70px;
+				}
+			}
+		}
+	}
+}
+
+// Small Screen Mobile Modes
+@media only screen and (max-width: 480px) {
+	body.layout-mode-responsive {
+		// RokSprocket Showcase
+		.fp-roksprocket-showcase .layout-showcase {
+			margin: 0;
+			.sprocket-features-title {
+				font-size: 1.5em;
+				line-height: 30px;
+			}
+			.sprocket-features-content {
+				width: 78%;
+			}	
+			.sprocket-features-desc:before {
+				top: 80px;
+			}
+			.arrow:before {
+				font-size: 38px !important;
+			}
+			.sprocket-features-arrows .arrow {
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				margin-top: 0;
+				&.prev {
+					left: -20px;
+				}
+				&.next {
+					right: -20px;
+				}
+			}
+		}	
+
+		// Staff Pics
+		.rt-staff-details {
+			height: 51px;
+		}	
+
+		// RokSprocket Tabs
+		[class*="sprocket"] .sprocket-tabs-nav li .sprocket-tabs-inner {
+			font-size: 0.7em;
+			padding: 3px 7px;
+		}
+		.fp-roksprocket-tabs {
+			.readon {
+				left: 0;
+				margin-left: 0;
+				margin: 15px auto;
+			}
+		}
+
+		// Demo Clients Strips
+		.rt-demo-clients {
+			.sprocket-strips-container {
+				padding: 35px;
+			}
+			.sprocket-strips-content {
+				height: 150px;
+			}
+			.sprocket-strips-arrows .arrow {
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				margin-top: -50px;
+				&.prev {
+					left: 0;
+				}
+				&.next {
+					right: 0;
+				}
+			}			
+		}
+
+		// Demo Typography
+		.promo1 {
+			font-size: @base-font-size * 2.5;
+			line-height: @base-line-height * 2.5;
+		}
+		.promo2 {
+			font-size: @base-font-size * 1.2;
+			line-height: @base-line-height * 1.2;
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-style: italic;	
+		}		
+	}
+}

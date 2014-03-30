@@ -1,0 +1,133 @@
+/**
+* @version   $Id: mixins.less 12813 2013-08-16 21:57:09Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+@import "utilities.less";
+@import "dropdowns.less";
+@import "popover.less";
+@import "buttons.less";
+
+/* Ellipsis */
+.ellipsis() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+}
+
+/* CSS Arrows */
+#CSSArrow {
+  .top(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	bottom: @arrowOffset;
+	left: @arrowPosition;
+	margin-left: -@arrowWidth;
+	border-left: @arrowWidth solid transparent;
+	border-right: @arrowWidth solid transparent;
+	border-top: @arrowWidth solid @arrowColor;
+  }
+  .left(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	top: @arrowPosition;
+	right: @arrowOffset;
+	margin-top: -@arrowWidth;
+	border-top: @arrowWidth solid transparent;
+	border-bottom: @arrowWidth solid transparent;
+	border-left: @arrowWidth solid @arrowColor;
+  }
+  .bottom(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	top: -@arrowOffset;
+	left: @arrowPosition;
+	margin-left: -@arrowWidth - 1;
+	border-left: @arrowWidth solid transparent;
+	border-right: @arrowWidth solid transparent;
+	border-bottom: @arrowWidth solid @arrowColor;
+  }
+  .right(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	top: @arrowPosition;
+	left: @arrowOffset;
+	margin-top: -@arrowWidth;
+	border-top: @arrowWidth solid transparent;
+	border-bottom: @arrowWidth solid transparent;
+	border-right: @arrowWidth solid @arrowColor;
+  }
+}
+
+// Text Color
+.textColor (@a) when (lightness(@a) >= 50%) {
+	color: darken(@a, 45%);
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+.textColor (@a) when (lightness(@a) >= 95%) {
+	color: @dark-grey;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+.textColor (@a) when (lightness(@a) < 50%) {
+	color: @light-grey;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.longShadow(@color, @size, @spread: 100, @flag: 1, @tmp: '') when (@size > 0) {
+  @percent: round(@flag / @size * 100) * @spread;
+  @shadowColor: fade(@color, @percent);
+  @shadow: ~"@{size}px @{size}px 1px @{shadowColor}";
+  @ends: ~"@{shadow}, @{tmp}";
+  @shadowString: ~"@{ends} 0px 0px 1px #000";
+
+  .longShadowLoop(@string, @index) when (@index < 1) {
+    text-shadow: @string;
+  }
+
+  .longShadowLoop(@shadowString, @size - 1);
+  .longShadow(@color, @size - 1, @spread, @flag + 1, @ends);
+}
+
+.longShadowBox(@color, @size, @spread: 1, @flag: 1, @tmp: '') when (@size > 0) {
+  @percent: round(@flag / @size * 100) * @spread;
+  @shadowColor: fade(@color, @percent);
+  @shadow: ~"@{size}px @{size}px 0 0 @{shadowColor}";
+  @ends: ~"@{shadow}, @{tmp}";
+  @shadowString: ~"@{ends} 0px 0px 0 0 #000";
+
+  .longShadowLoop(@string, @index) when (@index < 1) {
+    -webkit-box-shadow: @string;
+       -moz-box-shadow: @string;
+            box-shadow: @string;
+  }
+
+  .longShadowLoop(@shadowString, @size - 1);
+  .longShadowBox(@color, @size - 1, @spread, @flag + 1, @ends);
+}
+
+// System Messages
+.sys-msg-style (@textColor: #0055BB, @bgColor: #BFD3E6) {
+	color: @textColor;
+	background: @bgColor;
+	#gradient > .vertical(lighten(@bgColor, 3%), darken(@bgColor, 5%));
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);	
+}
+.sys-msg () {
+	padding: 15px;
+	border-radius: 4px;
+}
+.sys-msg (info) {
+	.sys-msg();
+	.sys-msg-style(#0264C3, #70CAFF);
+}
+.sys-msg (error) {
+	.sys-msg();
+	.sys-msg-style(#CC0000, #EBC8C9);
+}
+
+.sys-msg (notice) {
+	.sys-msg();
+	.sys-msg-style(#A08B4C, #F5ECC1);
+}
+.sys-msg (success) {
+	.sys-msg();
+	.sys-msg-style(#468847, #DFF0D8);
+}

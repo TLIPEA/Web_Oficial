@@ -1,0 +1,8 @@
+/*!
+ * @version   $Id: clearcache.css 4588 2012-10-27 02:10:21Z btowles $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+.clearcache .count {margin-left:4px;background:#000;color:#fff;font-weight:bold;display:inline-block;border-radius:8px;font-size:10px;width:16px;height:16px;text-align:center;line-height:17px;}
+.clearcache.boost-spinner .count {display:none;}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension method="upgrade" type="component" version="2.5">
+	<name>RokCandy</name>
+    <creationDate>May 28, 2013</creationDate>
+    <author>RocketTheme, LLC</author>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>2.0.0</version>
+    <description>
+		RokCandy is a simple yet powerful macro system for Joomla 1.6.  It provides the ability to create and categorize macros that can be used throughout your site.
+	</description>
+    <updateservers>
+   		<server name="RocketTheme Update Directory" priority="1" type="collection">http://updates.rockettheme.com/joomla/updates.xml</server>
+   	</updateservers>
+    <!-- Site part -->
+	<files folder="site">
+		<folder>assets</folder>
+        <filename>rokcandy.php</filename>
+        <filename>controller.php</filename>
+        <folder>language</folder>
+        <filename>index.html</filename>
+    </files>
+
+    <languages folder="site/language/en-GB">
+        <language tag="en-GB">en-GB.com_rokcandy.ini</language>
+    </languages>
+
+    <scriptfile>rokcandy_install.script.php</scriptfile>
+    
+    <!-- Administration part -->
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_rokcandy/assets/rokcandy-icon-16.png">COM_ROKCANDY</menu>
+        <submenu>
+            <menu img="components/com_rokcandy/assets/rokcandy-icon-16.png">COM_ROKCANDY_SUBMENU_MACROS</menu>
+            <menu img="components/com_rokcandy/assets/icon-16-category.png" link="option=com_categories&amp;extension=com_rokcandy">COM_ROKCANDY_SUBMENU_CATEGORIES</menu>
+        </submenu>
+
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<folder>sql</folder>
+            <folder>help</folder>
+            <folder>tables</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <filename>rokcandy.php</filename>
+            <folder>views</folder>
+            <filename>controller.php</filename>
+            <folder>language</folder>
+            <folder>controllers</folder>
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <folder>models</folder>
+            <folder>elements</folder>
+        </files>
+
+        <!-- Administration Language File Copy Section -->
+        <languages folder="admin/language/en-GB">
+            <language tag="en-GB">en-GB.com_rokcandy.ini</language>
+            <language tag="en-GB">en-GB.com_rokcandy.sys.ini</language>
+        </languages>
+
+	</administration>
+</extension>

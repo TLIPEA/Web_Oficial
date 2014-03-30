@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+
+		<field name="macro"
+			type="textarea"
+            rows="10" cols="5"
+			label="COM_ROKCANDY_FIELD_MACRO_LABEL"
+			description="COM_ROKCANDY_FIELD_MACRO_DESC"
+			class="inputbox rokcandy"
+			size="60"
+			required="true"
+            filter="raw"
+		 />
+
+		<field name="html"
+			type="textarea"
+            rows="10" cols="5"
+			label="COM_ROKCANDY_FIELD_HTML_LABEL"
+			description="COM_ROKCANDY_FIELD_HTML_DESC"
+			class="inputbox rokcandy"
+			size="60"
+            required="true"
+            filter="raw"
+		/>
+
+		<field id="published"
+			name="published"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+
+		</field>
+
+		<field name="catid"
+			type="category"
+			extension="com_rokcandy"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			class="inputbox"
+			required="true"
+		/>
+
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		 />
+
+		<field name="ordering"
+			type="ordering"
+			class="inputbox"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+		/>
+	</fieldset>
+</form>

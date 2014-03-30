@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension client="site" method="upgrade" type="module" version="2.5">
+    <name>RokAjaxSearch</name>
+    <author>RocketTheme, LLC</author>
+    <creationDate>February 17, 2014</creationDate>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <copyright>(C) 2005 - 2014 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>2.0.2</version>
+    <description>RokAjaxSearch is an ajaxian searcher that displays the results immediately and allows to choose the
+        proper one.
+    </description>
+    <updateservers>
+   		<server name="RocketTheme Update Directory" priority="1" type="collection">http://updates.rockettheme.com/joomla/updates.xml</server>
+   	</updateservers>
+    <files>
+    <folder>images</folder>
+        <folder>fields</folder>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+        <folder>themes</folder>
+        <filename>en-GB.mod_rokajaxsearch.ini</filename>
+        <filename module="mod_rokajaxsearch">mod_rokajaxsearch.php</filename>
+        <filename>CHANGELOG.php</filename>
+        <filename>helper.php</filename>
+        <filename>RT-LICENSE.php</filename>
+        <folder>js</folder>
+    </files>
+    <languages>
+    <language tag="en-GB">en-GB.mod_rokajaxsearch.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset addfieldpath="/modules/mod_rokajaxsearch/fields" name="basic">
+                <field default="index.php?option=com_search&amp;view=search&amp;tmpl=component" description="Relative path to your search page. &lt;br /&gt;Example: index.php?option=com_search" label="Search page URL." name="search_page" type="text"/>
+                <field default="index.php?option=com_search&amp;view=search" description="Relative path to your advanced search page. &lt;br /&gt;Example: index.php?option=com_search&amp;view=search" label="Advanced Search page URL." name="adv_search_page" type="text"/>
+                <field label="Style Options" type="break"/>
+                <field default="1" label="Include RokAjaxSearch default CSS" name="include_css" type="radio">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+                </field>
+                <field default="blue" label="Theme Style" name="theme" type="list">
+                <option value="blue">Blue</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                </field>
+                <field label="Advanced Search" type="break"/>
+                <field default="any" label="Searchphrase" name="searchphrase" type="list">
+                <option value="any">Any words</option>
+                <option value="all">All words</option>
+                <option value="exact">Exact phrase</option>
+                </field>
+                <field default="newest" label="Ordering" name="ordering" type="list">
+                <option value="alpha">Alphabetical</option>
+                <option value="category">Section/Category</option>
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="popular">Most popular</option>
+                </field>
+                <field default="10" label="Limit" name="limit" type="list">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                </field>
+                <field default="3" label="Results per page" name="perpage" type="list">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                </field>
+                <field label="Google Settings" type="break"/>
+                <field default="0" description="Enabling this will allow you to use Google API Search for searching the web via RokAjaxSearch. Note that the API Key is needed" label="Google Web Search" name="websearch" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="0" description="Enabling this will allow you to use Google API Search for searching blogs content via RokAjaxSearch. Note that the API Key is needed" label="Google Blog Search" name="blogsearch" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="0" description="Enabling this will allow you to use Google API Search for searching images via RokAjaxSearch. Note that the API Key is needed" label="Google Images Search" name="imagesearch" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="0" description="Enabling this will allow you to use Google API Search for searching vidoes via RokAjaxSearch. Note that the API Key is needed" label="Google Videos Search" name="videosearch" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="" description="In order to use RokAjaxSearch Web Search, you need a Google Ajax Search API Key. You can generate one for free at: http://code.google.com/apis/ajaxsearch/signup.html" label="Google Ajax Search API Key" name="websearch_api" type="text"/>
+                <field default="1" description="Set this option to yes, if you want to show the pagination on google's results." label="Show Pagination" name="show_pagination" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="MODERATE" description="Search results will be restricted to results based on the safesearch value" label="Google SafeSearch" name="safesearch" type="radio">
+                <option value="STRICT">Strict</option>
+                <option value="MODERATE">Moderate</option>
+                <option value="OFF">Off</option>
+                </field>
+                <field default="MEDIUM" description="Image sizes to search for, works only when Image Search is enabled." label="Image Size to search" name="image_size" type="radio">
+                <option value="SMALL">Small</option>
+                <option value="MEDIUM">Medium</option>
+                <option value="LARGE">Large</option>
+                <option value="EXTRA_LARGE">Extra Large</option>
+                </field>
+                <field default="1" description="Set this option to yes, if you want to show the estimated google results count." label="Show Estimated" name="show_estimated" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field label="Advanced Settings" type="break"/>
+                <field default="" description="If you want to hide one or more div tags on your page, input div ids here, seperate with space." label="Hide div id(s)" name="hide_divs" type="text"/>
+                <field default="1" description="Set this option to yes, if you want a text to appear at the bottom of the result list that links to com_search page." label="Link to all results" name="include_link" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="1" description="Set this option to yes, if you want to show the description on each result item." label="Show Description" name="show_description" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="1" description="Set this option to yes, if you want category and section to show up under each title." label="Include (Category/Section)" name="include_category" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field default="1" description="Set this option to yes, if you want the read more link to show up under the description." label="Show Read More link" name="show_readmore" type="radio">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" name="moduleclass_sfx" type="text"/>
+
+                <field default="1" description="COM_MODULES_FIELD_CACHING_DESC" label="COM_MODULES_FIELD_CACHING_LABEL" name="cache" type="list">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field default="900" description="COM_MODULES_FIELD_CACHE_TIME_DESC" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" name="cache_time" type="text"/>
+                <field default="static" name="cachemode" type="hidden"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

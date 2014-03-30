@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+        <fields name="params">
+            <fieldset name="splitmenu" label="Splitmenu Menu Options">
+                <field name="splitmenu_item_subtext" type="text" size="30" default="" label="Subtext Line" description="You can put a second line here"/>
+                <field name="splitmenu_customicon" type="iconlist" default="" label="Menu Icon" description="Choose an icon available via Font Awesome - http://fortawesome.github.com/Font-Awesome/" />
+                <field name="splitmenu_customclass" type="text" size="30" label="Custom CSS Class" description="A Custom CSS class that can be assigned to this item"/>
+            </fieldset>
+        </fields>
+    </config>
+</form>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+<title>RokCandy Macro - New / Edit</title>
+<link href="../help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>RokCandy Macro - New / Edit</h1>
+
+<p align="right">-- Draft version</p>
+
+<p>You must ensure the Macro you create is <strong>Published</strong> in order for it to be available for use in your content.</p>
+
+<p>You <strong>MUST</strong> Select a category.  If there are no categories listed in the dropdown, you must create one via the <strong>Category link</strong>.</p>
+    
+<p>The <strong>Ordering</strong> setting is purely for management purposes and doesn't affect the use of the macro in anyway.  It just affects the order the macro is displayed in the manager and also in the editor button.</p>
+
+<p>The <strong>Macro</strong> field is where you should put your macro that will be searched for and replaced in your content.  We strongly advice using BBCODE style syntax with square brackets <strong>"[ ]"</strong>, as these are clear to read and also are not stripped out by editors or by Joomla's filtering routines.  You do not have to use BBCODE however, as there is nothing restricting you to do so.  You could in theory just have a simple string replacement here.</p>
+
+<p>The <strong>HTML</strong> portion is where the resulting HTML or output code should be entered.  This is the code that will replace the macro when the macro is found in the content. Again this doesn't have to be HTML, it can actually be anything you want.</p>
+
+<p>Variables should be represented in curly brackets <strong>"{ }"</strong>.  If you use a variable in the macro you should also use that same variable in the HTML porition.</p>
+
+<h2>Examples</h2>
+
+Some examples of valid macros are shown below:<br />
+
+<code>
+    <br />
+    [h1]{text}[/h1]=&lt;h1&gt;{text}&lt;/h1&gt;<br /><br />
+
+    [h2]{text}[/h2]=&lt;h2&gt;{text}&lt;/h2&gt;<br /><br />
+
+    [h3]{text}[/h3]=&lt;h3&gt;{text}&lt;/h3&gt;<br /><br />
+
+    [h4]{text}[/h4]=&lt;h4&gt;{text}&lt;/h4&gt;<br /><br />
+
+    [h5]{text}[/h5]=&lt;h5&gt;{text}&lt;/h5&gt;<br /><br />
+
+    [h1heading]{text}[/h1heading]=&lt;h1 class=&quot;contentheading&quot;&gt;{text}&lt;/h1&gt;<br /><br />
+
+    [contentheading]{text}[/contentheading]=&lt;div class=&quot;contentheading&quot;&gt;{text}&lt;/div&gt;<br /><br />
+
+    [componentheading]{text}[/componentheading]=&lt;div class=&quot;componentheading&quot;&gt;{text}&lt;/div&gt;<br /><br />
+
+    [span class={classname}]{text}[/span]=&lt;span class=&quot;{classname}&quot;&gt;{text}&lt;/span&gt;<br /><br />
+
+    [pre]{text}[/pre]=&lt;pre&gt;{text}&lt;/pre&gt;<br /><br />
+
+    [blockquote]{text}[/blockquote]=&lt;blockquote&gt;{text}&lt;/blockquote&gt;<br /><br />
+
+    [blockquote class={classname}]{text}[/blockquote]=&lt;blockquote class=&quot;{classname}&quot;&gt;{text}&lt;/blockquote&gt;<br /><br />
+
+    [list class={classname}]{alist}[/list]=&lt;ul class=&quot;{classname}&quot;&gt;{alist}&lt;/ul&gt;<br /><br />
+
+    [li]{text}[/li]=&lt;li&gt;{text}&lt;/li&gt;<br /><br />
+
+    [number value={number}]{text}[/number]=&lt;p&gt;&lt;span class=&quot;number&quot;&gt;{number}&lt;/span&gt;{text}&lt;/p&gt;    <br /><br />
+
+</code>
+
+</html>

@@ -1,0 +1,87 @@
+/**
+* @version   $Id: offline.less 12813 2013-08-16 21:57:09Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+@import "variables.less";
+@import "mainbody-@{main-body-style}.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+
+.rt-offline-logo {
+	padding-top: 50px;
+	#rt-logo {
+		margin: 0 auto;
+	}	
+}
+.rt-sitename {
+	font-size: 3em;
+	line-height: 1em;
+	margin-top: 60px;
+	margin-bottom: 25px;
+	font-family: @acacia-font-bold !important;
+}
+.rt-offline-image {
+	text-align: center;
+	min-height: 630px;
+	&.rt-block {
+		margin: 0;
+		padding: 0;		
+	}	
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+.rt-offline-additional-message {
+	color: @white;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+	width: 60%;
+	margin: 50px auto;
+}	
+.rt-offline-form, .rt-offline-login-form {
+    margin: 0 auto 80px;
+    text-align: center;
+    width: 80%;
+	.inputbox {
+		color: @white;
+		border: 1px solid fadeout(@white, 70%);
+		#gradient > .horizontal(fadeout(@white, 80%), fadeout(@white, 80%));
+		width: 30%;
+		font-size: 1.5em;
+		padding: 15px;
+	}
+	.button{
+	    font-size: 1.5em;
+	    padding: 11px 25px;
+	}    
+}
+h2.rt-login-form-title {
+	margin-bottom: 15px;
+}
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body {
+		.rt-offline-form, .rt-offline-login-form {
+			.inputbox, .button {
+				width: 80%;
+			    height: 60px;	
+			    margin: auto;
+				display: block;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;				    			
+			}
+			.inputbox {
+				margin: 15px auto;
+			}
+			.readon, .button {
+			    padding: 10px 25px;		    
+			}
+		}		
+	}
+}		

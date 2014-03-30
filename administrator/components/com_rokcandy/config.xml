@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="basic">
+
+        <field name="forcecache"
+			type="radio"
+			default="0"
+			label="COM_ROKCANDY_FORCE_CACHE"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+        <field name="adminenabled"
+			type="radio"
+			default="0"
+			label="COM_ROKCANDY_ENABLED_ADMIN"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+        <field name="editenabled"
+			type="radio"
+			default="0"
+			label="COM_ROKCANDY_ENABLED_EDIT"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+        <field name="contentPlugin"
+			type="radio"
+			default="0"
+			label="COM_ROKCANDY_ENABLED_CONTENT"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="disabled"
+			type="textarea"
+            rows="10"
+            cols="50"
+			label="COM_ROKCANDY_DISABLED"
+			description="COM_ROKCANDY_DISABLED_DESC" />
+    </fieldset>
+</config>

@@ -1,0 +1,319 @@
+/**
+* @version   $Id: utilities.less 12813 2013-08-16 21:57:09Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+// Standard Inline Structural Adjustments
+body {
+	.rt-center {
+		text-align: center;
+	}
+	.rt-noborder {
+		border: 0 !important;
+		box-shadow: none !important;
+	}
+	.rt-floatleft {
+		float: left;
+		margin-right: 15px;
+		margin-left: 0;
+	}
+	.rt-floatright {
+		float: right;
+		margin-left: 15px;
+		margin-right: 0;
+	}
+	.rt-uppercase {
+		text-transform: uppercase;
+	}
+	.rt-lowercase {
+		text-transform: lowercase;
+	}	
+	.normalfont, .normalfont li {
+		font-size: 100% !important;
+		line-height: inherit !important;
+	}
+	.boldfont {
+		font-weight: bold !important;
+	}
+	.noitalic {
+		font-style: normal !important;
+	}
+	.nobold, .nobold a, .nobold li {
+		font-weight: normal !important;
+	}
+	.rt-displayinline {
+		display: inline !important;
+	}
+	.nomarginall, .rt-block.nomarginall, ul.nomarginall, li.nomarginall {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.nopaddingall, .rt-block.nopaddingall, ul.nopaddingall, li.nopaddingall {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	.nomargintop, .rt-block.nomargintop, ul.nomargintop, li.nomargintop {
+		margin-top: 0 !important;
+	}
+	.nomarginbottom, .rt-block.nomarginbottom, ul.nomarginbottom, li.nomarginbottom {
+		margin-bottom: 0 !important;
+	}
+	.nomarginleft, .rt-block.nomarginleft, ul.nomarginleft, li.nomarginleft {
+		margin-left: 0 !important;
+	}
+	.nomarginright, .rt-block.nomarginright, ul.nomarginright, li.nomarginright {
+		margin-right: 0 !important;
+	}
+	.nopaddingtop, .rt-block.nopaddingtop, ul.nopaddingtop, li.nopaddingtop {
+		padding-top: 0 !important;
+	}
+	.nopaddingbottom, .rt-block.nopaddingbottom, ul.nopaddingbottom, li.nopaddingbottom {
+		padding-bottom: 0 !important;
+	}
+	.nopaddingleft, .rt-block.nopaddingleft, ul.nopaddingleft, li.nopaddingleft {
+		padding-left: 0 !important;
+	}
+	.nopaddingright, .rt-block.nopaddingright, ul.nopaddingright, li.nopaddingright {
+		padding-right: 0 !important;
+	}
+	.smallmarginbottom {
+		margin-bottom: 5px !important;
+	}
+	.smallmargintop {
+		margin-top: 5px !important;
+	}
+	.smallmarginleft {
+		margin-left: 5px !important;
+	}
+	.smallmarginright {
+		margin-right: 5px !important;
+	}
+	.smallmarginall {
+		margin: 5px !important;
+	}	
+	.medmarginbottom {
+		margin-bottom: 10px !important;
+	}
+	.medmargintop {
+		margin-top: 10px !important;
+	}
+	.medmarginleft {
+		margin-left: 10px !important;
+	}
+	.medmarginright {
+		margin-right: 10px !important;
+	}
+	.medmarginall {
+		margin: 10px !important;
+	}
+	.largemarginbottom {
+		margin-bottom: 15px !important;
+	}
+	.largemargintop {
+		margin-top: 15px !important;
+	}
+	.largemarginleft {
+		margin-left: 15px !important;
+	}
+	.largemarginright {
+		margin-right: 15px !important;
+	}
+	.largemarginall {
+		margin: 15px !important;
+	}
+	.smallpaddingbottom {
+		padding-bottom: 5px !important;
+	}
+	.smallpaddingtop {
+		padding-top: 5px !important;
+	}
+	.smallpaddingleft {
+		padding-left: 5px !important;
+	}
+	.smallpaddingright {
+		padding-right: 5px !important;
+	}
+	.smallpaddingall {
+		padding: 5px !important;
+	}
+	.medpaddingbottom {
+		padding-bottom: 10px !important;
+	}
+	.medpaddingtop {
+		padding-top: 10px !important;
+	}
+	.medpaddingleft {
+		padding-left: 10px !important;
+	}
+	.medpaddingright {
+		padding-right: 10px !important;
+	}
+	.medpaddingall {
+		padding: 10px !important;
+	}
+	.largepaddingbottom {
+		padding-bottom: 15px !important;
+	}
+	.largepaddingtop {
+		padding-top: 15px !important;
+	}
+	.largepaddingleft {
+		padding-left: 15px !important;
+	}
+	.largepaddingright {
+		padding-right: 15px !important;
+	}
+	.largepaddingall {
+		padding: 15px !important;
+	}
+	.subsmallmarginbottom {
+		margin-bottom: -5px !important;
+	}
+	.subsmallmargintop {
+		margin-top: -5px !important;
+	}
+	.subsmallmarginleft {
+		margin-left: -5px !important;
+	}
+	.subsmallmarginright {
+		margin-right: -5px !important;
+	}
+	.subsmallmarginall {
+		margin: -5px !important;
+	}	
+	.submedmarginbottom {
+		margin-bottom: -10px !important;
+	}
+	.submedmargintop {
+		margin-top: -10px !important;
+	}
+	.submedmarginleft {
+		margin-left: -10px !important;
+	}
+	.submedmarginright {
+		margin-right: -10px !important;
+	}
+	.submedmarginall {
+		margin: -10px !important;
+	}
+	.sublargemarginbottom {
+		margin-bottom: -15px !important;
+	}
+	.sublargemargintop {
+		margin-top: -15px !important;
+	}
+	.sublargemarginleft {
+		margin-left: -15px !important;
+	}
+	.sublargemarginright {
+		margin-right: -15px !important;
+	}
+	.sublargemarginall {
+		margin: -15px !important;
+	}	
+	.rt-relative {
+		position: relative;
+	}	
+	[class^="custom"] {  
+		&.largepaddingright, 
+		&.largepaddingleft, 
+		&.largepaddingtop, 
+		&.largepaddingbottom, 
+		&.largepaddingall,
+		&.medpaddingright, 
+		&.medpaddingleft, 
+		&.medpaddingtop, 
+		&.medpaddingbottom,
+		&.medpaddingall, 
+		&.smallpaddingright, 
+		&.smallpaddingleft, 
+		&.smallpaddingtop, 
+		&.smallpaddingbottom, 
+		&.smallpaddingall,
+		&.largemarginright, 
+		&.largemarginleft, 
+		&.largemargintop, 
+		&.largemarginbottom,
+		&.largemarginall,
+		&.medmarginright, 
+		&.medmarginleft, 
+		&.medmargintop, 
+		&.medmarginbottom, 
+		&.medmarginall,
+		&.smallmarginright, 
+		&.smallmarginleft, 
+		&.smallmargintop, 
+		&.smallmarginbottom,
+		&.smallmarginall,		
+		&.sublargemarginright, 
+		&.sublargemarginleft, 
+		&.sublargemargintop, 
+		&.sublargemarginbottom,
+		&.sublargemarginall,
+		&.submedmarginright, 
+		&.submedmarginleft, 
+		&.submedmargintop, 
+		&.submedmarginbottom, 
+		&.submedmarginall,
+		&.subsmallmarginright, 
+		&.subsmallmarginleft, 
+		&.subsmallmargintop, 
+		&.subsmallmarginbottom,
+		&.subsmallmarginall {
+			padding: 0 0 0 0 !important;margin: 0 0 0 0 !important;
+		}                
+		&.rt-floatleft, &.rt-floatright {
+			float: none;
+			margin: 0 0 0 0 !important;
+		}                   
+	}
+}
+
+// Basic Reseting Classes
+body {
+	.noitalic {
+		font-style: normal !important;
+	}
+	.nobold {
+		font-weight: normal !important;
+	}
+	.flush {
+		margin: 0 !important; padding: 0 !important;
+	}
+	.nomarginall {
+		margin: 0 !important;
+	}
+	.nopaddingall {
+		padding: 0 !important;
+	}
+	.nomargintop {
+		margin-top: 0 !important;
+	}
+	.nomarginbottom {
+		margin-bottom: 0 !important;
+	}
+	.nomarginleft {
+		margin-left: 0 !important;
+	}
+	.nomarginright {
+		margin-right: 0 !important;
+	}
+	.nopaddingtop {
+		padding-top: 0 !important;
+	}
+	.nopaddingbottom {
+		padding-bottom: 0 !important;
+	}
+	.nopaddingleft {
+		padding-left: 0 !important;
+	}
+	.nopaddingright {
+		padding-right: 0 !important;
+	}
+}

@@ -1,0 +1,43 @@
+/**
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+/* Layout - Sprocket Headlines - Core */
+.sprocket-headlines {position: relative;-webkit-transform: translateZ(0);}
+.sprocket-headlines:after {display: table;content: "";*zoom: 1;clear: both;}
+.sprocket-headlines-container {display: table-row;}
+.sprocket-headlines ul {list-style: none !important;margin: 0;}
+
+/* Layout - Sprocket Headlines - Badge */
+.sprocket-headlines-badge {float: left;}
+.sprocket-headlines-badge span {display: block;padding: 10px !important;font-size: 1.1em;line-height: 1.2em;}
+
+/* Layout - Sprocket Headlines - Items */
+.sprocket-headlines-list {float: left;padding: 10px !important;overflow: hidden;}
+.sprocket-headlines-item {font-size: 1.1em;line-height: 1.2em;position: absolute;opacity: 0;height: 0;width: 0;display: block;visibility: hidden;}
+.sprocket-headlines-item.active {position: relative;opacity: 1;height: auto;width: auto;float: left;visibility: visible;}
+.animation-slideandfade .sprocket-headlines-item {margin-top: -100px;}
+.animation-slideandfade .sprocket-headlines-item.active {margin-top: 0;}
+.sprocket-headlines-image {float: left;margin-right: 10px;}
+
+/* Layout - Sprocket Headlines - Navigation */
+.sprocket-headlines-navigation {width: 100px;vertical-align: middle;padding: 5px;width: 60px;}
+.sprocket-headlines-navigation .arrow {position: absolute;display: block;width: 40px;height: 40px;top: 50%;margin-top: -20px;opacity: 1;cursor: pointer;z-index: 10;text-align: center;font-size: 24px;line-height: 38px;opacity: 0.7;-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;}
+.sprocket-headlines-navigation .arrow span {display: none;}
+.sprocket-headlines-navigation .arrow:hover {opacity: 1;}
+.sprocket-headlines-navigation .prev {left: -45px;}
+.sprocket-headlines-navigation .next {right: -45px;}
+.sprocket-headlines-navigation .arrow.next:before {content: '\f105';font-family: FontAwesome;}
+.sprocket-headlines-navigation .arrow.prev:before {content: '\f104';font-family: FontAwesome;}
+
+/* Layout - Sprocket Headlines - Colors */
+.sprocket-headlines {background: transparent; margin: 0 45px;}
+
+/* Layout - Sprocket Headlines - Transitions */
+.animation-slideandfade .sprocket-headlines-item.active {-webkit-transition: margin 0.3s ease-out, opacity 0.4s ease-in;-moz-transition: margin 0.3s ease-out, opacity 0.4s ease-in;-o-transition: margin 0.3s ease-out, opacity 0.4s ease-in;transition: margin 0.3s ease-out, opacity 0.4s ease-in;}
+.animation-fade .sprocket-headlines-item.active {-webkit-transition: opacity 0.4s ease-in;-moz-transition: opacity 0.4s ease-in;-o-transition: opacity 0.4s ease-in;transition: opacity 0.4s ease-in;}
+.sprocket-headlines-navigation .arrow {-webkit-transition: opacity 0.2s ease-in;-moz-transition: opacity 0.2s ease-in;-o-transition: opacity 0.2s ease-in;transition: opacity 0.2s ease-in;}
+
+/* Custom */
+.sprocket-headlines-navigation .arrow {color: #ffffff;background: rgba(0, 0, 0, 0.5);}

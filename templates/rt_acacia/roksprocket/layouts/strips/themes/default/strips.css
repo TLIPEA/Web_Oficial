@@ -1,0 +1,93 @@
+/**
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+/* Layout - Sprocket Strips - Core */
+.sprocket-strips {position: relative;-webkit-transform: translateZ(0);}
+.sprocket-strips:after {display: table;content: "";*zoom: 1;clear: both;}
+.sprocket-strips-container {list-style: none !important;overflow: hidden;padding: 0;margin: 0;}
+.sprocket-strips-container:before, .sprocket-strips-container:after {content: "";display: table;line-height: 0;}
+
+/* Layout - Sprocket Strips - Items */
+.sprocket-strips-item {background-size: cover;}
+.sprocket-strips-content {z-index: 2;padding: 15px;}
+.sprocket-strips-title {margin-top: 0;}
+.sprocket-strips-text {display: block;position: relative;}
+.sprocket-strips-content .readon {margin-top: 10px;}
+.sprocket-strips-container > li {float: left;margin: 10px 1%;position: relative;z-index: 10;}
+.sprocket-strips-container > li:hover {z-index: 100;}
+.cols-1 > li {width: 98%;}
+.cols-2 > li {width: 48%;}
+.cols-3 > li {width: 31.33%;}
+.cols-4 > li {width: 23%;}
+.cols-5 > li {width: 18%;}
+.cols-6 > li {width: 14.6667%;}
+.cols-7 > li {width: 12.2555%;}
+.cols-8 > li {width: 10.5%;}
+.cols-9 > li {width: 9.11%;}
+.cols-10 > li {width: 8%;}
+.cols-11 > li {width: 7.09%;}
+.cols-12 > li {width: 6.33%;}
+
+/* Layout - Sprocket Strips - Navigation */
+.sprocket-strips-nav {display: table;width: 100%;}
+.sprocket-strips-pagination {position: relative;text-align: center;z-index: 10;margin-top: 15px;}
+.sprocket-strips-pagination ul {margin: 0 !important;padding: 0 !important;}
+.sprocket-strips-pagination li {display: inline-block;padding: 7px;margin: 0 3px;opacity: 0.4;border-radius: 1em;cursor: pointer;-webkit-transform: translateZ(0);}
+.sprocket-strips-pagination li.active {opacity: 1;}
+.sprocket-strips-pagination li span {display: none;font-size: 0.85em;line-height: 1em;}
+.sprocket-strips-pagination-hidden {display: none;}
+.sprocket-strips-arrows {display: table-cell;vertical-align: middle;}
+.sprocket-strips-arrows .arrow {position: absolute;display: block;width: 40px;height: 40px;top: 50%;margin-top: -40px;cursor: pointer;z-index: 10000;text-align: center;font-size: 24px;line-height: 38px;opacity: 0.7;-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;}
+.sprocket-strips-arrows .arrow:hover {opacity: 1;}
+.sprocket-strips-arrows .arrow span {display: none;}
+.sprocket-strips-arrows .prev {left: -60px;}
+.sprocket-strips-arrows .next {right: -60px;}
+.sprocket-strips-arrows .arrow.next:before {content: '\f105';font-family: FontAwesome;}
+.sprocket-strips-arrows .arrow.prev:before {content: '\f104';font-family: FontAwesome;}
+
+/* Layout - Sprocket Strips - Transitions */
+.sprocket-strips-arrows .arrow {-webkit-transition: opacity 0.2s ease-in;-moz-transition: opacity 0.2s ease-in;-o-transition: opacity 0.2s ease-in;transition: opacity 0.2s ease-in;}
+
+/* Layout - Sprocket Strips - Colors */
+.sprocket-strips-item {-webkit-transform: translateZ(0);}
+
+/* Spinner */
+.sprocket-strips-overlay {display: none;position: absolute;margin-top: -66px;top:50%;left:0;right:0;bottom:0;background-color:transparent;z-index:1000;}
+.sprocket-strips-overlay .css-loader-wrapper {width: 60px;height:60px;margin: 0 auto;padding: 20px;background-color:#e5e5e5;background-color: rgba(0, 0, 0, 0.7);box-shadow:0 0 5px rgba(0, 0, 0, 0.4) inset,1px 1px 1px rgba(255, 255, 255, 0.1);border-radius:1em;}
+.sprocket-strips-overlay .css-loader-wrapper .css-loader {background-position: 50% 50%;background-repeat: no-repeat;}
+.sprocket-strips.loading .sprocket-strips-overlay {display: block;}
+.sprocket-strips.loading  .css-loader {-webkit-animation: rotate 1s linear infinite;-moz-animation: rotate 1s linear infinite;-ms-animation: rotate 1s linear infinite;-o-animation: rotate 1s linear infinite;animation: rotate 1s linear infinite;}
+
+/* Spinner Images */
+.sprocket-strips-overlay .css-loader:before {color: #fff;font-family: FontAwesome;content: "\f110";font-size: 60px;display: block;margin: 20px auto;width: 55px;text-shadow: none;}
+
+/* Spinner Rotator Keyframes */
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes rotate {
+  from {-ms-transform: rotate(0deg);}
+  to {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes rotate {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(360deg);}
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* Custom */
+.sprocket-strips-arrows .arrow {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
+.sprocket-strips-content {visibility: hidden;opacity: 0;color: #ffffff;background: rgba(0, 0, 0, 0.5);-webkit-transition: all 0.1s ease-in;-moz-transition: all 0.1s ease-in;-o-transition: all 0.1s ease-in;-ms-transition: all 0.1s ease-in;transition: all 0.1s ease-in;}
+.sprocket-strips-item:hover .sprocket-strips-content {visibility: visible;opacity: 1;}
+.sprocket-strips-pagination li {background: rgba(0, 0, 0, 0.7);}
+.sprocket-strips-pagination li.active {background: #000000;}

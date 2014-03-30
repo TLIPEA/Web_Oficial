@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS "#__admintools_ipblock" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_adminiplist" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_redirects" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_log" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_badwords" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_customperms" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_ipautoban" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_acl" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_wafexceptions" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_storage" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_filescache" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_scanalerts" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_scans" CASCADE;
+DROP TABLE IF EXISTS "#__admintools_profiles" CASCADE;

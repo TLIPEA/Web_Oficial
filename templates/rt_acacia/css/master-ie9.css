@@ -1,0 +1,31 @@
+/**
+* @version   $Id: master-ie9.css 13956 2013-09-30 19:28:09Z kevin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Menu Module */
+ul.menu li.active.current > a:before, ul.menu li.active.current > .item:before, ul.menu li.active.current > .separator:before,
+ul.menu #current.active > a:before, ul.menu #current.active > .item:before, ul.menu #current.active > .separator:before {font-size: 15px;}
+body .menu-block .gf-menu.l1 > li > .item {display: block;height: 35px;padding-top: 10px;}
+body .menu-block .gf-menu .dropdown li.parent > .dropdown-spacer:before {right: 8px;}
+body .menu-block .gf-menu .dropdown {box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;}
+
+/* RokSprocket */
+body [class*="sprocket"] .arrow {filter: none !important;}
+
+/* Module Suffixes */
+body [class*="box"] [class*="box"] {filter: none !important;}
+body [class^="box"] .module-content [class*="custom"], body [class*=" box"] .module-content [class*="custom"] {filter: none;}
+body .rt-gradient {filter: none !important;}
+body .title2 .title:before, body .title3 .title:before, body .title4 .title:before {vertical-align: inherit;}
+
+/* Joomla Pagination */
+body .pagination ul li a {filter: none;}
+
+/* Gradient + Border Radius Fix */
+body .button, body .readon, body button.validate, body p.readmore a, body #member-profile a, body #member-registration a, body .formelm-buttons button, body .controls .btn, body .logout-button .btn, body #gantry-totop, body .sprocket-mosaic-header li, body .sprocket-readmore, body .sprocket-mosaic-loadmore, body .sprocket-lists-title .indicator, body .roksearch_results a.clr, body #k2Container .k2ReadMore, body #k2Container #submitCommentButton {filter: none !important;}
+body #rt-header .horizontal-login #modlgn-passwd, body #rt-header .horizontal-login #modlgn-username, body .rokajaxsearch .roksearch-wrapper {filter: none !important;}
+body .sprocket-features-pagination li, body .sprocket-lists-pagination li, body .sprocket-strips-pagination li {filter: none !important;}
+body .sprocket-strips .sprocket-strips-item {filter: none !important;}

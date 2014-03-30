@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+<title>RokCandy Macro Manager</title>
+<link href="../help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>RokCandy Macro Manager</h1>
+
+<p align="right">-- Draft version</p>
+
+<p>The RokCandy Macro Manager is a simple yet powerful new extension for Joomla.  It allows you to create
+    simple replacement macros that makes the job of content creation much easier. </p>
+    
+<p>A macro is a small bit of text that can be used in content.  When this macro is found in content, it is replaced
+    with the HTML you have defined for that macro.  You can use an unlimited number of variables in the macro, and then
+    use these same variables in the HTML side. For best WYSIWYG results, we recommend BBCODE style macro syntax.  This 
+    ensures the editor you use will not rewrite or modify your code, and also Joomla will not filter it out with it's
+    extensive content filtering.</p>
+    
+<p>  A simple and not particularly helpful example is:</p>
+
+<code>[h1]{text}[/h1]=&lt;h1&gt;{text}&lt;/h1&gt;</code>
+
+<p>This would match [h1]My Heading[/h1] in your content and replace it with:&lt;h1&gt;My Heading&lt;/h1&gt;.</p>
+
+<p>The elements in the curly brackets {} can be any non-spaced string you like and you can have an unlimited number of them, this allows you to create powerful bbcode style macros. For example:</p>
+
+<code>[feature img=&quot;{url}&quot; line1=&quot;{line1}&quot; line2=&quot;{line2}&quot; /]=&lt;div class=&quot;featured-block png&quot;&gt;&lt;div class=&quot;padding&quot;&gt;&lt;div class=&quot;featured-image&quot;&gt;&lt;img src=&quot;{url}&quot; class=&quot;featured&quot; alt=&quot;image&quot; /&gt;&lt;div class=&quot;featured-desc&quot;&gt;&lt;span class=&quot;line1&quot;&gt;{line1}&lt;/span&gt;&lt;span class=&quot;line2&quot;&gt;{line2}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code>
+
+<p>This example clearly shows that a simple "feature" macro will be replaced by a fairly complex block of HTML.  This allows you to hide this complexity from your editors and reduces the likelihood of errors in markup occurring.</p>
+
+<p>The power of RokCandy is enhanced by it's ability to automatically include any mappings discovered in a template's <b>html/com_rokcandy/default.ini</b> file. These will be automatically incorporated into the library of available macros.  All 2009 RocketTheme templates will include the RokCandy macros needed to recreate the sample content and the typography styles included with the template releases.</p>
+
+</html>
