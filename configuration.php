@@ -10,9 +10,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
-	public $user = 'ususario bd';
-	public $password = 'password bd';
-	public $db = 'nombre bd';
+	public $user = 'peaorg_web';
+	public $password = '4kOH+a=bepfF';
+	public $db = 'peaorg_web';
 	public $dbprefix = 'P34t1l_';
 	public $live_site = '';
 	public $secret = 'aaAYxD7kORXHNX6Qly9ezLnCnJRr7eRf';
